@@ -1,0 +1,42 @@
+name: Build
+on:
+  push:
+    branches: [main]
+    paths-ignore: [".forgejo/workflows/deploy.yml", "README.md"]
+
+jobs:
+  build:
+    runs-on: docker
+    container: node:22-bookworm
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Fetch Quartz
+        run: |
+          git clone --depth=1 --branch v4.5.0 https://github.com/jackyzha0/quartz.git /tmp/quartz
+          rm -rf /tmp/quartz/content
+
+      - name: Stage content
+        run: |
+          rsync -a --exclude='.forgejo' --exclude='.git' ./ /tmp/quartz/content/
+          # Rename home.md -> index.md, content.md -> index.md
+          [ -f /tmp/quartz/content/home.md ] && mv /tmp/quartz/content/home.md /tmp/quartz/content/index.md
+          find /tmp/quartz/content -name 'content.md' -execdir mv content.md index.md \;
+
+      - name: Apply custom Quartz config
+        run: cp -r .forgejo/quartz/* /tmp/quartz/
+
+      - name: Install & build
+        working-directory: /tmp/quartz
+        run: |
+          npm ci
+          npx quartz build
+
+      - name: Upload artifact
+        uses: forgejo/upload-artifact@v4
+        with:
+          name: site
+          path: /tmp/quartz/public
+          retention-days: 7
