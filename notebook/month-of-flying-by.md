@@ -14,7 +14,7 @@ Hello, how was your month? It was a good and relaxing month for me, the "indepen
 
 This brings my next point, I have met a few interesting people this month and had the pleasure to be interviewed at [IndieTLV](https://indietlv.com/)'s Hack Night. This event happens every 2 weeks at the Google Campus in Tel Aviv, you should check it out! Oh, and you can watch the interview [here](https://www.youtube.com/watch?v=kMhQtl4VHv4) (in Hebrew).
 
-<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">https://www.youtube.com/watch?v=kMhQtl4VHv4 </div></figure>**Last thing**, the <s>new website</s> is up and running.
+**Last thing**, the ~~new website~~ is up and running.
 
 ## Launch and Forget
 

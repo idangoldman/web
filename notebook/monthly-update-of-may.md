@@ -18,7 +18,7 @@ Last month was all about spreading the word, video and fixing some more bugs.
 
 A promo walkthrough video I have created to give you and others a better look at the last version of StaticPage. Also, it was really fun editing the video! Watch the video at [this link](https://www.youtube.com/watch?v=vEiAj0Zr5xc), or below 🤩
 
-<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">https://www.youtube.com/watch?v=vEiAj0Zr5xc </div></figure>## Error Tracking
+## Error Tracking
 
 Having a critical bug in production changes a man. Especially when a user tells you about a bug in the main feature of the application. Can you guess what happened?
 

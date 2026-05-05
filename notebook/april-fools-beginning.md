@@ -22,9 +22,9 @@ So, what is the product you ask? A product that I have been working on over 3 ye
 
 **StaticPage** is a page builder made for creating _Coming Soon_ pages with features like a countdown clock, social icons, MailChimp integration. Oh, and the ability to download the page and publish it on any hosting provider you want. I know it's not much, but it's only the beginning!
 
-You can enjoy watching an old demo video of **StaticPage** here:
+You can enjoy watching an old demo video of **StaticPage** here: https://www.youtube.com/watch?v=IKsY3fVeoa0
 
-<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-4-3 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">https://www.youtube.com/watch?v=IKsY3fVeoa0 </div></figure>The marketing efforts will be focused on *Door-to-Door* marketing to page building sellers on freelance markets like Fiverr, as Paul Graham famously said: "[Do things that Don't Scale](http://paulgraham.com/ds.html)".
+The marketing efforts will be focused on _Door-to-Door_ marketing to page building sellers on freelance markets like Fiverr, as Paul Graham famously said: "[Do things that Don't Scale](http://paulgraham.com/ds.html)".
 
 ## Commitment
 
@@ -34,7 +34,7 @@ What's stopping me from going back on the promise to you, delivering **StaticPag
 
 ## Help Out
 
-Still reading and want to support me? I have entered a landing page contest to win **$5k**! Winning it will help growing **StaticPage** as a product and you can help too! Click on the link: <del>https://bit.ly/GetStaticPage</del> to the landing page I have created as part of this contest. Type your email in the form, click on "Get Early Access" button and you are done. Thank you for your endorsement!!!
+Still reading and want to support me? I have entered a landing page contest to win **$5k**! Winning it will help growing **StaticPage** as a product and you can help too! Click on the link: ~~https://bit.ly/GetStaticPage~~ to the landing page I have created as part of this contest. Type your email in the form, click on "Get Early Access" button and you are done. Thank you for your endorsement!!!
 
 Until next week, enjoy and let me know what you think! 🙌
 

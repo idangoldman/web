@@ -1,0 +1,95 @@
+- name: Content Editor
+  status: Idea
+  order: 0
+  description: |-
+    Browser extension that lets you edit any piece of content on a webpage without needing to log into the backend system. Perfect for those quick copy changes that shouldn't require a full CMS login dance.
+
+    Will be written with JavaScript on a Plate.
+
+- name: kit
+  status: Archived
+  url: https://github.com/idangoldman/kit
+  order: 0
+  description: |-
+    Opinionated UI Kit with dreams of becoming a proper Design System one day. Built with testing and documentation in mind because even CSS deserves proper testing, and yes, you can test SASS with a true tool.
+
+    Written in SASS with Jest, True, and SassDoc.
+
+- name: WP-DDE
+  status: Active
+  url: https://github.com/idangoldman/wp-dde
+  order: 1
+  description: |-
+    WordPress Docker Development Environment for building themes and plugins locally, and power small-scale websites too (like this one!).
+
+    Written in Docker Compose with PHP-FPM, MariaDB, Redis, Nginx, wp-cli containers, running on Synology NAS through HAProxy load balancing via OpenWRT router.
+
+- name: PLATE & fmwk
+  status: Development
+  url: https://github.com/idangoldman?tab=repositories&q=plate+OR+fmwk
+  order: 2
+  description: |-
+    Two JavaScript libraries that work together as "JavaScript on a PLATE". My opinionated take on making JavaScript enjoyable to write. It enhances JavaScript prototypes with Rails-style Ruby language enrichments, abstraction patterns for hooks, events, storage, and components.
+
+    Written in JavaScript, CoffeeScript, Gherkin, YAML with Fish, ESLint, ESBuild, Cucumber, Flow, and more tools than I probably need.
+
+- name: cmdfile
+  status: Concept
+  url: https://github.com/idangoldman/cmdfile-zig
+  order: 3
+  description: |-
+    CLI task runner that uses TOML configuration to execute command line tools. Started as a need for robust bash aliases management, then grew from frustration with NPM's long command sequences buried in JSON strings.
+
+    Written in Zig with TOML configuration files, while previous iterations were built in Python and Node.js.
+
+- name: Stooge
+  status: Development
+  url: https://github.com/idangoldman/stooge
+  order: 4
+  description: |-
+    CLI tool for converting configuration files between JSON, YAML, TOML, and INI formats. Mostly built to maintain my sanity writing YAML files instead of JSON, because life's too short for manual format conversion.
+
+    Written in JavaScript, Gherkin with support for JSON, YAML, TOML, INI, then CoffeeScript with Cucumber, zx, yargs, and will be rewritten in TypeScript.
+
+- name: SVG-Icon
+  status: Draft
+  url: https://github.com/idangoldman/svg-icon
+  order: 6
+  description: |-
+    Unified <svg-icon /> component that works across the entire JavaScript ecosystem - native, libraries, frameworks, you name it. Handles SVG files as single icons or sprites with sanitization and caching, because dealing with SVG icons shouldn't be framework-specific.
+
+    Written in JavaScript, TypeScript, Gherkin with integrations for Angular, Ember, jQuery, React, Svelte, Vue, Web Components.
+
+- name: PIPL
+  status: Concept
+  order: 7
+  description: |-
+    Meta-language experiment for maintaining multi-language codebases by writing pseudo-code once and transpiling to target languages. It's my exploration of providing unified tooling and development experience across different programming languages in indent-based readable syntax.
+
+    Will be written in Zig as I continue my journey into systems programming and language design.
+
+- name: Text Editor
+  status: Idea
+  order: 7
+  description: |-
+    Web-based text editor for viewing and editing universal text file formats directly in the browser. Built as a PWA, so, I can edit any text file from any device, with offline support and GitHub repository sync for seamless editing regardless of where your files live.
+
+    Will be written in TypeScript with React.
+
+- name: StaticPage
+  status: Archived
+  url: https://github.com/idangoldman?tab=repositories&q=StaticPage
+  order: 8
+  description: |-
+    Coming soon page builder that let you create landing pages and download the actual source code. I built everything from design and frontend to backend and server infrastructure, learning the entire product lifecycle in the process. Great learning experience, though I aimed at a different market than the one that was ready for this tool.
+
+    Written in Python, JavaScript, SASS, Markdown using Flask, Fabric, Flight.js, Jinja, Nunjucks, Gulp, SQLAlchemy, PostgreSQL, deployed to Heroku and AWS S3.
+
+- name: ToDoin
+  status: Archived
+  url: https://github.com/idangoldman?tab=repositories&q=todo
+  order: 9
+  description: |-
+    To-do list Chrome extension with private to-dos twist, built for office environments where some tasks need to stay away from curious eyes. Every developer builds a to-do app eventually, this was mine.
+
+    Written in JavaScript, SASS with Backbone, Gulp, and released to the Chrome Web Store.

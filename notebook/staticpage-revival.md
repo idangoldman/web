@@ -16,7 +16,7 @@ I won’t bore you with the details, you can read all about it in the [April Foo
 
 All I will write is that **StaticPage** was updated with new features on and off in the past 2 years and now it’s in full-time development mode. Features like multiple pages, preset templates (release this week), social icons, and more.
 
-You can try the new version by subscribing to <s>StaticPage Mailing List</s> and getting a link to test it out.
+You can try the new version by subscribing to ~~StaticPage Mailing List~~ and getting a link to test it out.
 
 Please let me know what are your thoughts about the new version of **StaticPage**!
 

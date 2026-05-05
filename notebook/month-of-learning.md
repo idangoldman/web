@@ -12,7 +12,7 @@ publish: true
 
 Hello, how was your month? Mine went awesome! Learned about what people want in their page builder, keyword research, video editing, social media posting. Oh, and the [walkthrough video](https://www.youtube.com/watch?v=vEiAj0Zr5xc) is out!
 
-<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">https://www.youtube.com/watch?v=vEiAj0Zr5xc </div></figure>## Marketing on Fiverr
+## Marketing on Fiverr
 
 It's not going well, had _*62* Impressions_, _*13* Clicks_, _*34* Views_, _*1* Buyer Message_ for my Gig in the 2 weeks since it was posted. Tried to share the gig on my social media accounts [LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:6539187166130561024/) and [Twitter](https://twitter.com/idan_goldman/status/1133443320162791424) as recommended by Fiverr and nothing changed.
 

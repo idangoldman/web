@@ -46,7 +46,19 @@ At the moment I'm trying to think of alternative ways reaching those freelancers
 
 Failing marketing gave me the energy to work on StaticPage's code! I'm proud to release this week a templates feature. Meaning, every time you create a new landing page with StaticPage. You will be able to pick 1 of 4 cool templates to begin with:
 
-<figure class="wp-block-image size-full">![Back to School Template Screenshot](/wp-content/uploads/2025/07/back-to-school.jpg)<figcaption class="wp-element-caption">**Back to School** template with a Countdown clock</figcaption></figure><figure class="wp-block-image size-full">![LocalBar Template Screenshot](/wp-content/uploads/2025/07/localbar.jpg)<figcaption class="wp-element-caption">**LocalBar** template with Social Icons</figcaption></figure><figure class="wp-block-image size-full">![Gooal Template Screenshot](/wp-content/uploads/2025/07/goooal.jpg)<figcaption class="wp-element-caption">**GOOOAL!** template with a Mailing list</figcaption></figure><figure class="wp-block-image size-full">![Flight Club Template Screenshot](/wp-content/uploads/2025/07/flight-club.jpg "Screen")<figcaption class="wp-element-caption">**Flight Club** template with a Countdown clock, Mailing list, and Social Icons.</figcaption></figure>## Current Week
+![Back to School Template Screenshot](./back-to-school.jpg)
+**Back to School** template with a Countdown clock
+
+![LocalBar Template Screenshot](./localbar.jpg)
+**LocalBar** template with Social Icons
+
+![GOOOAL! Template Screenshot](./goooal.jpg)
+**GOOOAL!** template with a Mailing list
+
+![Flight Club Template Screenshot](./flight-club.jpg)
+**Flight Club** template with a Countdown clock, Mailing list, and Social Icons.
+
+## Current Week
 
 This week is all about focusing on these things:
 
@@ -55,6 +67,6 @@ This week is all about focusing on these things:
 
 ### Still Reading and want to Support Me?
 
-Please subscribe to StaticPage testing mailing list here: <del>bit.ly/GetStaticPage</del> and help win $5k which will help growing StaticPage.
+Please subscribe to StaticPage testing mailing list here: ~~bit.ly/GetStaticPage~~ and help win $5k which will help growing StaticPage.
 
 _Until next week_, enjoy and let me know what you think! 🙌

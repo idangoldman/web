@@ -17,7 +17,13 @@ As it sounds StaticPage is a static page creator (builder if you must) for makin
 
 The idea of StaticPage and page creator, in general, have been in my head for a couple of years, so my instincts were to puke the idea with a pen over a notebook for starters and afterward port it to the sketch app. See what the people around me thought of the idea.
 
-<figure class="wp-block-gallery has-nested-images columns-default is-cropped"><figure class="wp-block-image size-large" style="margin-top:0;margin-bottom:0">![](/wp-content/uploads/2025/09/StaticPage-Page-1024x683.png)<figcaption class="wp-element-caption">StaticPage - Page</figcaption></figure><figure class="wp-block-image size-large" style="margin-top:0;margin-bottom:0">![](/wp-content/uploads/2025/09/StaticPage-Panels-1024x683.png)<figcaption class="wp-element-caption">StaticPage - Panels</figcaption></figure></figure>As you can see up top the design looks similar to the WordPress dashboard. This is because I have borrowed a lot of inspiration from their design, with that in mind the people who saw this sketch had an easy time relating to the design and making sense of it.
+![StaticPage - Page](./staticpage-page.png)
+**StaticPage - Page**
+
+![StaticPage - Panels](./staticpage-panels.png)
+**StaticPage - Panels**
+
+As you can see up top the design looks similar to the WordPress dashboard. This is because I have borrowed a lot of inspiration from their design, with that in mind the people who saw this sketch had an easy time relating to the design and making sense of it.
 
 ## Shopping for Domain Names
 
@@ -25,9 +31,9 @@ My naming process is all about associations. So as making a page creator product
 
 Until now I have bought 3 domain names:
 
-- <s>staticpages.info</s> - The first one, I was thinking in plural terms.
-- <s>staticpage.info</s> - With the first version out to the world a bought the singular version of the domain name.
-- <s>staticpage.io</s> - Bought this one after I was certain the product can become something.
+- ~~staticpages.info~~ - The first one, I was thinking in plural terms.
+- ~~staticpage.info~~ - With the first version out to the world a bought the singular version of the domain name.
+- ~~staticpage.io~~ - Bought this one after I was certain the product can become something.
 
 ## Version 1 and 2
 

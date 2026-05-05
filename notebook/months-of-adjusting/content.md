@@ -22,12 +22,14 @@ This brought me to apply for "Osek Murshe" (Authorized Dealer) Israeli term for 
 
 Getting "Osek Murshe" was the easier part, getting clients would be the harder part as always is. Clients want to see a portfolio if you are a creative professional. Great, this means I can build myself a website, but first I would sketch it out, to the Sketchmobile! Here is a website sketch that wasn't picked:
 
-<figure class="wp-block-image aligncenter size-large">![Website Sketch](/wp-content/uploads/2025/07/website-sketch-1024x802.png)<figcaption class="wp-element-caption">Website sketch that could go pro but never did</figcaption></figure>The design you are reading off right now was the lucky one. If you are reading these lines off an email (I have sent you with a fashioned delay) you are more than welcome to visit the website at <a href="" rel="noreferrer noopener" target="_blank">idan.goldman.work</a>. Let me know what do you think about the long resume page. ;)
+![Website Sketch](./website-sketch.png)
+
+The design you are reading off right now was the lucky one. If you are reading these lines off an email (I have sent you with a fashioned delay) you are more than welcome to visit the website at idan.goldman.work. Let me know what do you think about the long resume page. ;)
 
 I won't bore you with all the details of what and how the website was built but rather give you a fast bulletin summary:
 
 - My goal was to build a "read-only" resume page without visual distractions in an article format and not in the traditional resume template format.
-- Beside the <a href="" rel="noreferrer noopener" target="_blank">Resume</a> page there are 2 other pages on the website [Notebook](/notebook/) page for my blobs and [Say Hello](/say_hello/) for anyone that want to contact me over email or just feel like staying anonymous.
+- Beside the [Resume](/resume/) page there are 2 other pages on the website [Notebook](/notebook/) page for my blobs and [Say Hello](/say_hello/) for anyone that want to contact me over email or just feel like staying anonymous.
 - The website was built upon Jekyll static site generator, this tech gave it a good loading speed and Markdown support for easy content writing.
 - The build created 2 new open source projects: [Kit](https://github.com/idangoldman/kit) and Rebo. You can read all about them at their GitHub pages or in the Products and Open Source section of the resume page.
 - You can view the source code of [idan.goldman.work](https://github.com/idangoldman/idan.goldman.work) on GitHub.

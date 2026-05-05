@@ -64,6 +64,6 @@ Waiting to see next week's numbers!
 
 ### Still reading and want to support me?
 
-Please subscribe to StaticPage testing mailing list here: <del>bit.ly/GetStaticPage</del> and help win $5k which will help growing StaticPage.
+Please subscribe to StaticPage testing mailing list here: ~~bit.ly/GetStaticPage~~ and help win $5k which will help growing StaticPage.
 
 _Until next week_, enjoy and let me know what you think! 🙌

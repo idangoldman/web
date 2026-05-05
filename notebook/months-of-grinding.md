@@ -18,7 +18,7 @@ Trying to hustle my way up, applying to any freelance proposal I'm competent eno
 
 I'm sure this month will be more fruitful than the previous one because I got reinforcement. 🥁 Leeya is joining me and will do and be responsible for marketing and sales. This is awesome news and I wish her the best!
 
-Oh, and there is a new <s>services page</s> on my website, check it out!
+Oh, and there is a new ~~services page~~ on my website, check it out!
 
 ## StaticPage update
 

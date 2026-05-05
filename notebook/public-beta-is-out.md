@@ -44,7 +44,7 @@ Check out my credentials on [LinkedIn](https://www.linkedin.com/in/idangoldman/)
 
 ### Haven’t guessed it yet?
 
-The link to StaticPage’s new website: <s>https://staticpage.io</s>
+The link to StaticPage’s new website: ~~https://staticpage.io~~
 
 Meanwhile, have fun and enjoy the day! :)
 Idan.
