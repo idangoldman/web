@@ -1,17 +1,11 @@
 ---
-id: 1570
 title: 'Monthly Update of May'
-date: '2019-06-03T20:04:00+03:00'
-author: Idan
-excerpt: 'I’m doing well, thanks for asking! 😊 Last month was all about spreading the word, video and fixing some more bugs.'
-layout: post
-guid: 'https://idan.goldman.work/?p=1570'
-permalink: /notebook/monthly-update-of-may/
-categories:
-    - StaticPage
+published: '2019-06-03T20:04:00+03:00'
+description: 'I’m doing well, thanks for asking! 😊 Last month was all about spreading the word, video and fixing some more bugs.'
 tags:
-    - Newsletter
-format: false
+  - StaticPage
+  - Newsletter
+publish: true
 ---
 
 ### Hello, how are you doing?
@@ -42,5 +36,5 @@ It sucks but Blog, Docs, and Support pages are still under heavy development and
 
 I know, I haven’t released any new features this month! Please bear with me while I’m building decent marketing and support channels for StaticPage to grow upon. These channels help me communicate with you better and understand what you need from a product like StaticPage. I already have a couple of features planned that will make your work awesome! 🥳
 
-Meanwhile, have fun and enjoy the day! 🤓  
+Meanwhile, have fun and enjoy the day! 🤓
 Idan.

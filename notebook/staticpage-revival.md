@@ -1,17 +1,11 @@
 ---
-id: 1558
 title: 'StaticPage Revival'
-date: '2019-04-29T12:00:00+03:00'
-author: Idan
-excerpt: 'Great News, StaticPage is in full-time development mode and will be released on May 1st.'
-layout: post
-guid: 'https://idan.goldman.work/?p=1558'
-permalink: /notebook/staticpage-revival/
-categories:
-    - StaticPage
+published: '2019-04-29T12:00:00+03:00'
+description: 'Great News, StaticPage is in full-time development mode and will be released on May 1st.'
 tags:
-    - Newsletter
-format: false
+  - StaticPage
+  - Newsletter
+publish: true
 ---
 
 ### Hello old friend,
@@ -26,7 +20,7 @@ You can try the new version by subscribing to <s>StaticPage Mailing List</s> and
 
 Please let me know what are your thoughts about the new version of **StaticPage**!
 
-Follow me on Twitter and get daily updates on the progress of developing StaticPage at [@idan\_goldman](https://twitter.com/idan_goldman).
+Follow me on Twitter and get daily updates on the progress of developing StaticPage at [@idan_goldman](https://twitter.com/idan_goldman).
 
-Meanwhile, have fun and enjoy the week! :)  
+Meanwhile, have fun and enjoy the week! :)
 Idan.

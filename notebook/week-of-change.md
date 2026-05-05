@@ -1,17 +1,11 @@
 ---
-id: 118
 title: 'Week of Change'
-date: '2019-04-22T16:22:00+03:00'
-author: Idan
-excerpt: 'My week went solid. Released a StaticPage templates feature and instead of continuing to build a new landing page. I took a step back and thought about my near future goals and working routine.'
-layout: post
-guid: 'https://idan.goldman.work/?p=118'
-permalink: /notebook/week-of-change/
-categories:
-    - Journaling
+published: '2019-04-22T16:22:00+03:00'
+description: 'My week went solid. Released a StaticPage templates feature and instead of continuing to build a new landing page. I took a step back and thought about my near future goals and working routine.'
 tags:
-    - Newsletter
-format: false
+  - Journaling
+  - Newsletter
+publish: true
 ---
 
 ## TL;DR
@@ -72,4 +66,4 @@ Waiting to see next week's numbers!
 
 Please subscribe to StaticPage testing mailing list here: <del>bit.ly/GetStaticPage</del> and help win $5k which will help growing StaticPage.
 
-*Until next week*, enjoy and let me know what you think! 🙌
+_Until next week_, enjoy and let me know what you think! 🙌

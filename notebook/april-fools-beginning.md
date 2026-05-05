@@ -1,17 +1,11 @@
 ---
-id: 110
 title: 'April Fool&#8217;s Beginning'
-date: '2019-04-01T16:40:00+03:00'
-author: Idan
-excerpt: "Hello friends, family, and people I met along the way! I'm starting a journey as a Bootstrapper and will be launching a product on May 1st."
-layout: post
-guid: 'https://idan.goldman.work/?p=110'
-permalink: /notebook/april-fools-beginning/
-categories:
-    - Journaling
+published: '2019-04-01T16:40:00+03:00'
+description: "Hello friends, family, and people I met along the way! I'm starting a journey as a Bootstrapper and will be launching a product on May 1st."
 tags:
-    - Newsletter
-format: false
+  - Journaling
+  - Newsletter
+publish: true
 ---
 
 ## TL;DR
@@ -26,7 +20,7 @@ Lots of different product ideas floating in my head that I would love to see (an
 
 So, what is the product you ask? A product that I have been working on over 3 years (on/off, mostly off) and some of you are probably tired hearing about it.
 
-**StaticPage** is a page builder made for creating *Coming Soon* pages with features like a countdown clock, social icons, MailChimp integration. Oh, and the ability to download the page and publish it on any hosting provider you want. I know it's not much, but it's only the beginning!
+**StaticPage** is a page builder made for creating _Coming Soon_ pages with features like a countdown clock, social icons, MailChimp integration. Oh, and the ability to download the page and publish it on any hosting provider you want. I know it's not much, but it's only the beginning!
 
 You can enjoy watching an old demo video of **StaticPage** here:
 
@@ -34,9 +28,9 @@ You can enjoy watching an old demo video of **StaticPage** here:
 
 ## Commitment
 
-I will be launching **StaticPage** on *May 1st*, with all the irony it being the Worker's Day and all.
+I will be launching **StaticPage** on _May 1st_, with all the irony it being the Worker's Day and all.
 
-What's stopping me from going back on the promise to you, delivering **StaticPage** in one month? A lifetime commitment to you! OK, not a lifetime but a weekly one. Every Monday, an email update will be sent out describing the progress that been made that week. The extremists can get a daily progress update by following me on *Twitter* ([@idan\_goldman](https://twitter.com/idan_goldman)).
+What's stopping me from going back on the promise to you, delivering **StaticPage** in one month? A lifetime commitment to you! OK, not a lifetime but a weekly one. Every Monday, an email update will be sent out describing the progress that been made that week. The extremists can get a daily progress update by following me on _Twitter_ ([@idan_goldman](https://twitter.com/idan_goldman)).
 
 ## Help Out
 

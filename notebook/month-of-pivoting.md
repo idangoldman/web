@@ -1,17 +1,11 @@
 ---
-id: 160
 title: 'Month of Pivoting'
-date: '2019-08-05T21:01:00+03:00'
-author: Idan
-excerpt: 'My month was split into two parts, before vacation and after.'
-layout: post
-guid: 'https://idan.goldman.work/?p=160'
-permalink: /notebook/month-of-pivoting/
-categories:
-    - Journaling
+published: '2019-08-05T21:01:00+03:00'
+description: 'My month was split into two parts, before vacation and after.'
 tags:
-    - Newsletter
-format: false
+  - Journaling
+  - Newsletter
+publish: true
 ---
 
 ## TL;DR
@@ -52,4 +46,4 @@ The newsletter sent to 119 people on Monday before last and until today it achie
 - 2 (4.3%) replied.
 - 1 (0.84%) unsubscribed.
 
-*Until next month*, enjoy and let me know what you think! 🙌
+_Until next month_, enjoy and let me know what you think! 🙌

@@ -1,15 +1,10 @@
 ---
-id: 1588
 title: 'I want to tell you a story.'
-date: '2017-06-21T23:44:00+03:00'
-author: Idan
-excerpt: 'As it sounds StaticPage is a static page creator (builder if you must) for making Coming Soon, Maintenance, and 404-page templates which can be downloaded and used on your own server or website.'
-layout: post
-guid: 'https://idan.goldman.work/?p=1588'
-permalink: /notebook/i-want-to-tell-you-a-story/
-categories:
-    - StaticPage
-format: false
+published: '2017-06-21T23:44:00+03:00'
+description: 'As it sounds StaticPage is a static page creator (builder if you must) for making Coming Soon, Maintenance, and 404-page templates which can be downloaded and used on your own server or website.'
+tags:
+  - StaticPage
+publish: true
 ---
 
 ## About StaticPage

@@ -1,17 +1,11 @@
 ---
-id: 158
 title: 'Month of Flying By'
-date: '2019-07-01T18:06:00+03:00'
-author: Idan
-excerpt: 'It was a good and relaxing month for me, the "independence" part starting to sink in. Making me shift focus from doing only things that will bring immediate value to things that need more time to harvest. For example: meeting people, creating new connections, maintaining early ones too instead of building a web agency.'
-layout: post
-guid: 'https://idan.goldman.work/?p=158'
-permalink: /notebook/month-of-flying-by/
-categories:
-    - Journaling
+published: '2019-07-01T18:06:00+03:00'
+description: 'It was a good and relaxing month for me, the "independence" part starting to sink in. Making me shift focus from doing only things that will bring immediate value to things that need more time to harvest. For example: meeting people, creating new connections, maintaining early ones too instead of building a web agency.'
 tags:
-    - Newsletter
-format: false
+  - Journaling
+  - Newsletter
+publish: true
 ---
 
 ## TL;DR
@@ -56,4 +50,4 @@ The newsletter sent to 122 people on Monday before last and until today it achie
 - 4 (9.0%) replied.
 - 3 (2.45%) unsubscribed.
 
-*Until next month*, enjoy and let me know what you think! 🙌
+_Until next month_, enjoy and let me know what you think! 🙌

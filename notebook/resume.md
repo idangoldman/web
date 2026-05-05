@@ -1,15 +1,8 @@
 ---
-id: 163
 title: Resume
-date: '2019-11-27T13:00:00+02:00'
-author: Idan
-excerpt: 'Link to my GitHub page and LinkedIn profile.'
-layout: post
-guid: 'https://idan.goldman.work/?p=163'
-permalink: /notebook/resume/
-categories:
-    - Uncategorized
-format: false
+published: '2019-11-27T13:00:00+02:00'
+description: 'Link to my GitHub page and LinkedIn profile.'
+publish: true
 ---
 
 ## TL;DR
@@ -20,17 +13,17 @@ Link to my [GitHub page](https://github.com/idangoldman) and [LinkedIn profile](
 
 - [Introduction](#introduction)
 - [Skill Sets](#skill-sets)
-    - [Frontend](#frontend)
-    - [Frameworks and Backend](#frameworks-and-backend)
-    - [CMSs' and SSGs'](#cmss-and-ssgs)
+  - [Frontend](#frontend)
+  - [Frameworks and Backend](#frameworks-and-backend)
+  - [CMSs' and SSGs'](#cmss-and-ssgs)
 - [Products and Open Source](#products-and-open-source)
-    - [StaticPage](#staticpage-website)
-    - [ToDoin](#todoin-web-store)
-    - [Kit](#kit-github)
-    - [Feature](#feature-github)
-    - [Rebo](#rebo-github)
+  - [StaticPage](#staticpage-website)
+  - [ToDoin](#todoin-web-store)
+  - [Kit](#kit-github)
+  - [Feature](#feature-github)
+  - [Rebo](#rebo-github)
 - [Client Work](#client-work)
-    - [Achievements](#achievements)
+  - [Achievements](#achievements)
 
 ## Introduction
 
@@ -56,7 +49,7 @@ On the SSG side, I'm most experienced with `Jekyll` and know a bit about `Middle
 
 Also, I have created multiple themes and plugins for the above platforms, even got a chance to build a `WordPress VIP plugin`.
 
-***One more thing***, I have a feel for `UX/UI` design. This always helped me communicate better with design and product professionals to make great end products. `Responsive design` with `parallax scrolling` are my jam. I can create a solid design on top of given `Mockups` or `Wireframes` using a preferable `Design System` (`Material Design`, `Bootstrap`, etc).
+**_One more thing_**, I have a feel for `UX/UI` design. This always helped me communicate better with design and product professionals to make great end products. `Responsive design` with `parallax scrolling` are my jam. I can create a solid design on top of given `Mockups` or `Wireframes` using a preferable `Design System` (`Material Design`, `Bootstrap`, etc).
 
 ## Products and Open Source
 

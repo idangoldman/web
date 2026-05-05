@@ -1,17 +1,11 @@
 ---
-id: 149
 title: 'Week of Quiet'
-date: '2019-05-20T16:00:00+03:00'
-author: Idan
-excerpt: 'Mine went good all things considered except the routine which went to hell. I''m partially back to work! Re-recorded StaticPage''s walkthrough video. Published Fiverr gig "Create a Coming Soon Page in 1 Day". Got more traction on Twitter with the help of a pen pal, and got deeper into the rabbit hole of productivity apps.'
-layout: post
-guid: 'https://idan.goldman.work/?p=149'
-permalink: /notebook/week-of-quiet/
-categories:
-    - Journaling
+published: '2019-05-20T16:00:00+03:00'
+description: 'Mine went good all things considered except the routine which went to hell. I''m partially back to work! Re-recorded StaticPage''s walkthrough video. Published Fiverr gig "Create a Coming Soon Page in 1 Day". Got more traction on Twitter with the help of a pen pal, and got deeper into the rabbit hole of productivity apps.'
 tags:
-    - Newsletter
-format: false
+  - Journaling
+  - Newsletter
+publish: true
 ---
 
 ## TL;DR
@@ -58,4 +52,4 @@ The newsletter sent to 123 people on last Monday and until today it achieved:
 
 Waiting to see next week's numbers!
 
-*Until next week*, enjoy and let me know what you think! 🙌
+_Until next week_, enjoy and let me know what you think! 🙌

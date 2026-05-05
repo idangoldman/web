@@ -1,17 +1,11 @@
 ---
-id: 1564
 title: 'Public Beta is OUT!'
-date: '2019-04-30T20:14:00+03:00'
-author: Idan
-excerpt: 'What a month it has been... I can sum it up by new LOGO, new website, new feature, new service, and StaticPage is in public beta.'
-layout: post
-guid: 'https://idan.goldman.work/?p=1564'
-permalink: /notebook/public-beta-is-out/
-categories:
-    - StaticPage
+published: '2019-04-30T20:14:00+03:00'
+description: 'What a month it has been... I can sum it up by new LOGO, new website, new feature, new service, and StaticPage is in public beta.'
 tags:
-    - Newsletter
-format: false
+  - StaticPage
+  - Newsletter
+publish: true
 ---
 
 ### Hello, how are you doing?
@@ -52,5 +46,5 @@ Check out my credentials on [LinkedIn](https://www.linkedin.com/in/idangoldman/)
 
 The link to StaticPage’s new website: <s>https://staticpage.io</s>
 
-Meanwhile, have fun and enjoy the day! :)  
+Meanwhile, have fun and enjoy the day! :)
 Idan.

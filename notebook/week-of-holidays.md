@@ -1,17 +1,11 @@
 ---
-id: 147
 title: 'Week of Holidays'
-date: '2019-04-29T16:58:00+03:00'
-author: Idan
-excerpt: "My went great, spend some family and got some work done using the new routine tools for last week's update. Let's see some stats today!"
-layout: post
-guid: 'https://idan.goldman.work/?p=147'
-permalink: /notebook/week-of-holidays/
-categories:
-    - Journaling
+published: '2019-04-29T16:58:00+03:00'
+description: "My went great, spend some family and got some work done using the new routine tools for last week's update. Let's see some stats today!"
 tags:
-    - Newsletter
-format: false
+  - Journaling
+  - Newsletter
+publish: true
 ---
 
 ## TL;DR
@@ -61,4 +55,4 @@ Waiting to see next week's numbers!
 
 Yeah, I'm not going to win. So, I have dropped from the competition and moved all the contacts [ConvertKit](https://convertkit.com/) to [Mailchimp](https://mailchimp.com/). See you at the product release!
 
-*Until next week*, enjoy and let me know what you think! 🙌
+_Until next week_, enjoy and let me know what you think! 🙌

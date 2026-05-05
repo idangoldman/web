@@ -1,17 +1,11 @@
 ---
-id: 1578
 title: 'Pivot Time'
-date: '2019-08-05T20:38:00+03:00'
-author: Idan
-excerpt: 'Yes, you read it right! One thing led to another (the wireframe from the previous update) and I have decided to make a product pivot to solve a different problem.'
-layout: post
-guid: 'https://idan.goldman.work/?p=1578'
-permalink: /notebook/pivot-time/
-categories:
-    - StaticPage
+published: '2019-08-05T20:38:00+03:00'
+description: 'Yes, you read it right! One thing led to another (the wireframe from the previous update) and I have decided to make a product pivot to solve a different problem.'
 tags:
-    - Newsletter
-format: false
+  - StaticPage
+  - Newsletter
+publish: true
 ---
 
 ### Hello, how are you doing?
@@ -34,5 +28,5 @@ Stay tuned for next month’s update and conclusions!
 
 **P.S.** If you have any problem with using the current StaticPage let me know and I will help you.
 
-Meanwhile, have fun and enjoy the month! 🤓  
+Meanwhile, have fun and enjoy the month! 🤓
 Idan.

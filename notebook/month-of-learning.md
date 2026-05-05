@@ -1,17 +1,11 @@
 ---
-id: 156
 title: 'Month of Learning'
-date: '2019-06-03T18:45:00+03:00'
-author: Idan
-excerpt: 'Mine went awesome! Learned about what people want in their page builder, keyword research, video editing, social media posting. Oh, and the walkthrough video is out!'
-layout: post
-guid: 'https://idan.goldman.work/?p=156'
-permalink: /notebook/month-of-learning/
-categories:
-    - Journaling
+published: '2019-06-03T18:45:00+03:00'
+description: 'Mine went awesome! Learned about what people want in their page builder, keyword research, video editing, social media posting. Oh, and the walkthrough video is out!'
 tags:
-    - Newsletter
-format: false
+  - Journaling
+  - Newsletter
+publish: true
 ---
 
 ## TL;DR
@@ -20,7 +14,7 @@ Hello, how was your month? Mine went awesome! Learned about what people want in 
 
 <figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">https://www.youtube.com/watch?v=vEiAj0Zr5xc </div></figure>## Marketing on Fiverr
 
-It's not going well, had ***62** Impressions*, ***13** Clicks*, ***34** Views*, ***1** Buyer Message* for my Gig in the 2 weeks since it was posted. Tried to share the gig on my social media accounts [LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:6539187166130561024/) and [Twitter](https://twitter.com/idan_goldman/status/1133443320162791424) as recommended by Fiverr and nothing changed.
+It's not going well, had _*62* Impressions_, _*13* Clicks_, _*34* Views_, _*1* Buyer Message_ for my Gig in the 2 weeks since it was posted. Tried to share the gig on my social media accounts [LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:6539187166130561024/) and [Twitter](https://twitter.com/idan_goldman/status/1133443320162791424) as recommended by Fiverr and nothing changed.
 
 **During the next 2 weeks**, I will be selling proactively on Fiverr. There is a "Buyer Requests" page on the site, where buyers can post their gig requests and Sellers can apply. Already applied for a "build static web page" gig.
 
@@ -63,4 +57,4 @@ The newsletter sent to 122 people on last Monday and until today it achieved:
 - 0 subscribed.
 - 1 (0.8%) unsubscribed.
 
-*Until next week*, enjoy and let me know what you think! 🙌
+_Until next week_, enjoy and let me know what you think! 🙌

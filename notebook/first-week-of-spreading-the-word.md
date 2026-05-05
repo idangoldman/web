@@ -1,17 +1,11 @@
 ---
-id: 116
 title: 'First week of spreading the word'
-date: '2019-04-08T15:43:00+03:00'
-author: Idan
-excerpt: "Hello again, how was your week? My week went fine with some initial numbers to show for, now I'm ready and excited for this week's tasks!"
-layout: post
-guid: 'https://idan.goldman.work/?p=116'
-permalink: /notebook/first-week-of-spreading-the-word/
-categories:
-    - Journaling
+published: '2019-04-08T15:43:00+03:00'
+description: "Hello again, how was your week? My week went fine with some initial numbers to show for, now I'm ready and excited for this week's tasks!"
 tags:
-    - Newsletter
-format: false
+  - Journaling
+  - Newsletter
+publish: true
 ---
 
 ## TL;DR
@@ -37,10 +31,10 @@ Not bad for a first week writing to a loving audience.
 
 After the first day's high sending out the newsletter, re-posting it on LinkedIn and Twitter. I was ready to talk to some potential beta testing customers or sellers as Fiverr calls them.
 
-**The measurement** used for finding these sellers was:  
-*Should have "I Will create a Coming Soon page for you" gig with above 10 recommendations*
+**The measurement** used for finding these sellers was:
+_Should have "I Will create a Coming Soon page for you" gig with above 10 recommendations_
 
-*The pitch flow* was to approach 50 Fiverr sellers with a cold message, if they respond positively, then send them a link to the landing page. From there, they should decide to subscribe or not.
+_The pitch flow_ was to approach 50 Fiverr sellers with a cold message, if they respond positively, then send them a link to the landing page. From there, they should decide to subscribe or not.
 
 Have sent 3 cold messages before realizing the pitch flow was broken but more on this later. Fixed the pitch flow and successfully sent another 27 cold messages before Fiverr stopped me. They sent a parental notice that I'm in violation of their terms of use agreement and I should stop immediately. Made sense, so, I did.
 
@@ -79,4 +73,4 @@ This week is all about focusing on these things:
 
 Please subscribe to StaticPage testing mailing list here: <del>bit.ly/GetStaticPage</del> and help win $5k which will help growing StaticPage.
 
-*Until next week*, enjoy and let me know what you think! 🙌
+_Until next week_, enjoy and let me know what you think! 🙌

@@ -1,17 +1,11 @@
 ---
-id: 1575
 title: 'Monthly Update of June'
-date: '2019-07-01T19:23:00+03:00'
-author: Idan
-excerpt: 'Hello, how are you doing? I’m good, thank you! Nothing much to update on this month I’m afraid. Still spreading the word and heading your thoughts on StaticPage as a product and where it should go.'
-layout: post
-guid: 'https://idan.goldman.work/?p=1575'
-permalink: /notebook/monthly-update-of-june/
-categories:
-    - StaticPage
+published: '2019-07-01T19:23:00+03:00'
+description: 'Hello, how are you doing? I’m good, thank you! Nothing much to update on this month I’m afraid. Still spreading the word and heading your thoughts on StaticPage as a product and where it should go.'
 tags:
-    - Newsletter
-format: false
+  - StaticPage
+  - Newsletter
+publish: true
 ---
 
 ### Hello, how are you doing?
@@ -34,5 +28,5 @@ Sorry, can’t go into the details yet, writing the specs for them as you read t
 
 <figure class="wp-block-image size-large">![](/wp-content/uploads/2025/09/image-1024x132.png)</figure>Let me know what you think? I would love to discuss it with you!
 
-Meanwhile, have fun and enjoy the day! 🤓  
+Meanwhile, have fun and enjoy the day! 🤓
 Idan.

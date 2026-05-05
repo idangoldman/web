@@ -1,17 +1,11 @@
 ---
-id: 122
 title: 'Feedback Week'
-date: '2019-04-15T17:01:00+03:00'
-author: Idan
-excerpt: 'Hello, how was your week? My week went horribly with the wrong marketing assumptions, followed by anxiety. On the bright side, templates feature for StaticPage is almost ready for release with 4 templates. Now, ready to retrospec and move forward.'
-layout: post
-guid: 'https://idan.goldman.work/?p=122'
-permalink: /notebook/feedback-week/
-categories:
-    - Journaling
+published: '2019-04-15T17:01:00+03:00'
+description: 'Hello, how was your week? My week went horribly with the wrong marketing assumptions, followed by anxiety. On the bright side, templates feature for StaticPage is almost ready for release with 4 templates. Now, ready to retrospec and move forward.'
 tags:
-    - Newsletter
-format: false
+  - Journaling
+  - Newsletter
+publish: true
 ---
 
 ## TL;DR
@@ -63,4 +57,4 @@ This week is all about focusing on these things:
 
 Please subscribe to StaticPage testing mailing list here: <del>bit.ly/GetStaticPage</del> and help win $5k which will help growing StaticPage.
 
-*Until next week*, enjoy and let me know what you think! 🙌
+_Until next week_, enjoy and let me know what you think! 🙌

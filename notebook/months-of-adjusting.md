@@ -1,28 +1,22 @@
 ---
-id: 172
 title: 'Months of Adjusting'
-date: '2019-11-04T09:00:00+02:00'
-author: Idan
-excerpt: 'Battling myself for the “right” decision on the StaticPage pivot or not question. Which to be honest still hunts me but I have decided to move forward with it and make StaticPage a real page builder for various theme supporting platforms... But this is not what this post about.'
-layout: post
-guid: 'https://idan.goldman.work/?p=172'
-permalink: /notebook/months-of-adjusting/
-categories:
-    - Journaling
+published: '2019-11-04T09:00:00+02:00'
+description: 'Battling myself for the “right” decision on the StaticPage pivot or not question. Which to be honest still hunts me but I have decided to move forward with it and make StaticPage a real page builder for various theme supporting platforms... But this is not what this post about.'
 tags:
-    - Newsletter
-format: false
+  - Journaling
+  - Newsletter
+publish: true
 ---
 
 ## TL;DR
 
-Hello, how were your last couple of months? Mine went battling myself for the "right" decision on the *StaticPage pivot or not* question. Which to be honest still hunts me but I have decided to move forward with it and make StaticPage a real page builder for various theme supporting platforms.
+Hello, how were your last couple of months? Mine went battling myself for the "right" decision on the _StaticPage pivot or not_ question. Which to be honest still hunts me but I have decided to move forward with it and make StaticPage a real page builder for various theme supporting platforms.
 
 ## Time to Make Money
 
 While being paralyzed from the above paragraph and various opinions about what should I do with the damn thing which isn't less paralyzing. Shifting context to something else hopefully would help me come back to StaticPage with a refresh look and energy.
 
-This brought me to apply for "Osek Murshe" (Authorized Dealer) Israeli term for *Small Business License* for small businesses with yearly revenue above ₪100k. "Why?", you might ask. Well, it was time for me to get off my ass and start making money! They aren't growing on trees you know?! I wish they were... Anyhow, the best way I know how to make money besides working a full-time job is freelancing, and to make everything legal I had to get a small business license of some sort.
+This brought me to apply for "Osek Murshe" (Authorized Dealer) Israeli term for _Small Business License_ for small businesses with yearly revenue above ₪100k. "Why?", you might ask. Well, it was time for me to get off my ass and start making money! They aren't growing on trees you know?! I wish they were... Anyhow, the best way I know how to make money besides working a full-time job is freelancing, and to make everything legal I had to get a small business license of some sort.
 
 ## The Website
 

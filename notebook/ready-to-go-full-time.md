@@ -1,26 +1,20 @@
 ---
-id: 1549
 title: 'Ready to Go Full-Time'
-date: '2025-08-31T11:14:46+03:00'
-author: Idan
-excerpt: 'After 5+ years running 123Code, I closed shop and went on a power-up hiatus with included battery replacement. Now, I’m charged-up and looking for my next full-time role. Keep reading for the Why and Whats.'
-layout: post
-guid: 'https://idan.goldman.work/?p=1549'
-permalink: /notebook/ready-to-go-full-time/
-categories:
-    - Journaling
+published: '2025-08-31T11:14:46+03:00'
+description: 'After 5+ years running 123Code, I closed shop and went on a power-up hiatus with included battery replacement. Now, I’m charged-up and looking for my next full-time role. Keep reading for the Why and Whats.'
 tags:
-    - OpenToWork
-    - Remote
-    - SoftwareEngineering
-    - TechJobs
-    - TelAviv
-format: false
+  - Journaling
+  - OpenToWork
+  - Remote
+  - SoftwareEngineering
+  - TechJobs
+  - TelAviv
+publish: true
 ---
 
 After 5+ years running 123Code, I closed shop and went on a power-up hiatus with included battery replacement. Now, I’m charged-up and looking for my next full-time role. Keep reading for the Why and Whats.
 
-For context, 123Code was a code-consultancy that helped tech companies rewrite, optimize, and maintain their codebases or as I called it — “*car garage for tech companies*”.
+For context, 123Code was a code-consultancy that helped tech companies rewrite, optimize, and maintain their codebases or as I called it — “_car garage for tech companies_”.
 
 ## Why go “back” being a full-timer?
 
@@ -44,6 +38,6 @@ Open to opportunities in Israel or remote with reasonable timezone overlap for a
 
 If you know a team that needs someone who genuinely enjoys figuring out why the CI/CD process is slow, or advocates for product managers writing feature documents rather than never ending stories, and believes documentation shouldn’t suck, let’s talk.
 
-Full background at <a href="" rel="noreferrer noopener" target="_blank">idan.goldman.work</a> - and yes, I’ll actually respond to messages myself, no AI or templates involved, besides that one of course 😉.
+Full background at idan.goldman.work - and yes, I’ll actually respond to messages myself, no AI or templates involved, besides that one of course 😉.
 
-\#OpenToWork #TechJobs #SoftwareEngineering #TelAviv #Remote
+#OpenToWork #TechJobs #SoftwareEngineering #TelAviv #Remote

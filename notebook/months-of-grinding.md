@@ -1,17 +1,11 @@
 ---
-id: 169
 title: 'Months of Grinding'
-date: '2019-12-03T16:40:00+02:00'
-author: Idan
-excerpt: 'Mine went as same shit different day, putting the hours and grinding my skills in hope to get at this freelance game.'
-layout: post
-guid: 'https://idan.goldman.work/?p=169'
-permalink: /notebook/months-of-grinding/
-categories:
-    - Journaling
+published: '2019-12-03T16:40:00+02:00'
+description: 'Mine went as same shit different day, putting the hours and grinding my skills in hope to get at this freelance game.'
 tags:
-    - Newsletter
-format: false
+  - Journaling
+  - Newsletter
+publish: true
 ---
 
 ## TL;DR

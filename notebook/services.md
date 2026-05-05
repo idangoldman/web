@@ -1,15 +1,8 @@
 ---
-id: 165
 title: Services
-date: '2019-11-27T14:00:00+02:00'
-author: Idan
-excerpt: "I'm good at building frontend stuff, want to hire me? Say Hello."
-layout: post
-guid: 'https://idan.goldman.work/?p=165'
-permalink: /notebook/services/
-categories:
-    - Uncategorized
-format: false
+published: '2019-11-27T14:00:00+02:00'
+description: "I'm good at building frontend stuff, want to hire me? Say Hello."
+publish: true
 ---
 
 ## TL;DR
