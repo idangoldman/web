@@ -15,7 +15,7 @@ So… my current thesis is focus on content and keep everything else to a minimu
 
 ## Focus on Content
 
-> *> Write > Publish > Read*
+> *Write > Publish > Read*
 
 Pretty simple isn’t it? While it looks like any other flow of SSG there is, my peace of mind lies in the details of keeping plumbing code out of the content git repository. Let me explain what I mean by that.
 
