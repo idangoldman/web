@@ -11,7 +11,7 @@ on:
 jobs:
   deploy:
     runs-on: ci
-    if: ${{ forge.event.workflow_run.conclusion == 'success' }}
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
     steps:
       - run: echo "Deploying to production..."
