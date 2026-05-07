@@ -2,8 +2,7 @@ name: Deploy
 
 on:
   workflow_run:
-    workflows:
-      - Build
+    workflows: [ "Build" ]
     types:
       - completed
     branches:
@@ -12,7 +11,7 @@ on:
 jobs:
   deploy:
     runs-on: ci
-    if: ${{ forgejo.event.workflow_run.conclusion == 'success' }}
+    if: ${{ forge.event.workflow_run.conclusion == 'success' }}
 
     steps:
       - run: echo "Deploying to production..."
@@ -22,7 +21,7 @@ jobs:
     #     with:
     #       name: site
     #       path: ./public
-    #       run-id: ${{ forgejo.event.workflow_run.id }}
+    #       run-id: ${{ forge.event.workflow_run.id }}
 
     #   - name: Deploy to Cloudflare Pages
     #     env:
