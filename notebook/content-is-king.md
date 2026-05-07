@@ -25,6 +25,7 @@ This time, content files are the main focus as they always should have been whil
 
 ## How it looks
 
+```shell
 content/
 ├── .forgejo/
 ├── about.md
@@ -40,6 +41,7 @@ content/
     ├── ready-to-go-full-time.md
     ├── …
 └── studio.md
+```
 
 Well, what do you think? For my eyes the codebase clutter is gone and all I left with is structured content of files and folders translated into web paths with some underneath code plumbing like:
 
@@ -53,6 +55,7 @@ Well, what do you think? For my eyes the codebase clutter is gone and all I left
 
 The hidden piece of code plumbing (magic) done inside `.forgejo` folder. Take a look:
 
+```shell
 content/
 ├── .forgejo/
 │   ├── workflows/
@@ -62,13 +65,14 @@ content/
 │       └── custom.scss
 │       ├── quartz.config.ts
 │       ├── quartz.layout.ts
+```
 
 So, what do we got here? `workflows` and `quartz` folders, one for building and deploying the content you read on this website and the other for configuration and customization of this website.
 
 ### Why Forgejo and Quartz?
 
-- *++Forgejo++* is easy, I’m already enjoy using it as my self-hosted git server and action runner. It runs blazing fast (in my set up) and has a snappy web ui which helps.
-- *++Quartz++*… don’t know yet, will see. Seems like it’s made for generating websites out of *Obsidian* like content folders and comes with supporting plugins to keep same content structures on the web.
+- *_Forgejo_* is easy, I’m already enjoy using it as my self-hosted git server and action runner. It runs blazing fast (in my set up) and has a snappy web ui which helps.
+- *_Quartz_*… don’t know yet, will see. Seems like it’s made for generating websites out of *Obsidian* like content folders and comes with supporting plugins to keep same content structures on the web.
 
 ## Workflows
 
@@ -77,8 +81,6 @@ Last part in this piece of content before I jump into proving my thesis right, i
 ```mermaid
 flowchart TD
 A[“✍️ Write Content”]:::write –> B[“📂 Save Changes”]:::action
-
-```
 
 subgraph pipeline ["Automatic Pipeline"]
     direction TB
@@ -132,8 +134,6 @@ classDef remove fill:#dc3545,stroke:#b02a37,color:#fff
 classDef build fill:#6f42c1,stroke:#5a32a3,color:#fff
 classDef deploy fill:#198754,stroke:#13653f,color:#fff
 classDef live fill:#0dcaf0,stroke:#0aa2c0,color:#333
-
-```
 ```
 
 ### Steps
