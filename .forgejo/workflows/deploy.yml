@@ -12,7 +12,7 @@ on:
 jobs:
   deploy:
     runs-on: ci
-    if: ${{ forge.event.workflow_run.conclusion == 'success' }}
+    if: ${{ forgejo.event.workflow_run.conclusion == 'success' }}
 
     steps:
       - run: echo "Deploying to production..."
@@ -22,7 +22,7 @@ jobs:
     #     with:
     #       name: site
     #       path: ./public
-    #       run-id: ${{ forge.event.workflow_run.id }}
+    #       run-id: ${{ forgejo.event.workflow_run.id }}
 
     #   - name: Deploy to Cloudflare Pages
     #     env:
