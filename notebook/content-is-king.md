@@ -26,7 +26,7 @@ This time, content files are the main focus as they always should have been whil
 ## How it looks
 
 ```shell
-content/
+web/
 ├── .forgejo/
 ├── about.md
 ├── home.md
@@ -56,7 +56,7 @@ Well, what do you think? For my eyes the codebase clutter is gone and all I left
 The hidden piece of code plumbing (magic) done inside `.forgejo` folder. Take a look:
 
 ```shell
-content/
+web/
 ├── .forgejo/
 │   ├── workflows/
 │   │   ├── build.yml
