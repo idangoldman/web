@@ -1,25 +1,32 @@
 name: Deploy
+
 on:
   workflow_run:
-    workflows: [Build]
-    types: [completed]
-    branches: [main]
+    workflows:
+      - Build
+    types:
+      - completed
+    branches:
+      - main
 
 jobs:
   deploy:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
-    runs-on: docker
-    container: node:22-bookworm
-    steps:
-      - name: Download artifact
-        uses: forgejo/download-artifact@v4
-        with:
-          name: site
-          path: ./public
-          run-id: ${{ github.event.workflow_run.id }}
+    runs-on: ci
+    if: ${{ forge.event.workflow_run.conclusion == 'success' }}
 
-      - name: Deploy to Cloudflare Pages
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
-        run: npx wrangler@latest pages deploy ./public --project-name=idan-goldman-work --branch=main
+    steps:
+      - run: echo "Deploying to production..."
+    # steps:
+    #   - name: Download artifact
+    #     uses: forgejo/download-artifact@v4
+    #     with:
+    #       name: site
+    #       path: ./public
+    #       run-id: ${{ forge.event.workflow_run.id }}
+
+    #   - name: Deploy to Cloudflare Pages
+    #     env:
+    #       CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+    #       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+    #     run: npx wrangler@latest pages deploy ./public --project-name=idan-goldman-work
+    #       --branch=main

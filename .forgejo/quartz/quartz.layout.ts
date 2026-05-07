@@ -8,9 +8,9 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [],
   footer: Component.Footer({
     links: {
+      GitHub: "https://github.com/idangoldman",
+      LinkedIn: "https://www.linkedin.com/in/idangoldman/",
       RSS: "/index.xml",
-      Forgejo: "https://git.goldman.work/idan/content", // adjust to your actual repo URL
-      "BLAH.ink": "https://blah.ink"
     }
   })
 };
