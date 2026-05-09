@@ -11,7 +11,7 @@ const config: QuartzConfig = {
     analytics: null,
     locale: "en-US",
     baseUrl: "idan.goldman.work",
-    ignorePatterns: [".forgejo", "node_modules", ".git", ".quartz-build"],
+    ignorePatterns: [".forgejo", ".git", ".quartz-build"],
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",
