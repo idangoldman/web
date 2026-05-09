@@ -12,7 +12,7 @@ const config: QuartzConfig = {
     locale: "en-US",
     baseUrl: "idan.goldman.work",
     ignorePatterns: [".forgejo", ".git", ".quartz-build"],
-    defaultDateType: "modified",
+    defaultDateType: "published",
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
@@ -52,13 +52,12 @@ const config: QuartzConfig = {
       Plugin.FrontMatter(),
       CustomSlugs(),
       Plugin.CreatedModifiedDate({ priority: ["frontmatter", "git", "filesystem"] }),
-      Plugin.SyntaxHighlighting({ theme: { light: "github-light", dark: "github-dark" }, keepBackground: false }),
+      Plugin.SyntaxHighlighting(),
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.TableOfContents(),
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
       Plugin.Description(),
-      Plugin.Latex({ renderEngine: "katex" })
     ],
     filters: [Plugin.RemoveDrafts(), Plugin.ExplicitPublish()],
     emitters: [
@@ -71,7 +70,7 @@ const config: QuartzConfig = {
       Plugin.Assets(),
       Plugin.Static(),
       Plugin.NotFoundPage(),
-      Plugin.CustomOgImages() // generates per-page OG images via Satori
+      Plugin.CustomOgImages()
     ]
   }
 };
