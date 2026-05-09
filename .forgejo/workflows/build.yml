@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0 # Fetch all history for tagging
-          token: ${{ secrets.ACTION_RUNNER_TOKEN }} # ${{ secrets.FORGEJO_PAT }}
+          # token: ${{ secrets.ACTION_RUNNER_TOKEN }} # ${{ secrets.FORGEJO_PAT }}
 
       - name: Set up Quartz
         run: |
