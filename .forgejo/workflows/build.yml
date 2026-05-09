@@ -23,6 +23,7 @@ jobs:
       - name: Set up Quartz
         run: |
           mkdir -p ${QUARTZ_DIR}
+          git config --global advice.detachedHead false
           git clone --depth=1 --branch ${QUARTZ_VERSION} https://github.com/jackyzha0/quartz.git ${QUARTZ_DIR}
           cd ${QUARTZ_DIR} && npm ci
 
@@ -36,8 +37,8 @@ jobs:
         run: echo "value=$(date -u +%Y.%m.%d)-${GITHUB_SHA::7}" >> $GITHUB_OUTPUT
 
       - name: Build and Package
-        working-directory: ${QUARTZ_DIR}
         run: |
+          cd ${QUARTZ_DIR}
           npx quartz build --directory ../ --output public
           zip -r site-${{ steps.v.outputs.value }}.zip public
 
