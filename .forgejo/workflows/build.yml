@@ -51,7 +51,7 @@ jobs:
         run: |
           cd ${QUARTZ_DIR}
           npx quartz build --directory ../ --output public
-          zip -r ${VERSION}.zip public
+          zip -r ${VERSION}-site.zip public
 
       - name: Upload Package
         env:
