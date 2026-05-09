@@ -40,4 +40,4 @@ If you know a team that needs someone who genuinely enjoys figuring out why the 
 
 Full background at idan.goldman.work - and yes, I’ll actually respond to messages myself, no AI or templates involved, besides that one of course 😉.
 
-#OpenToWork #TechJobs #SoftwareEngineering #TelAviv #Remote
+\#OpenToWork #TechJobs #SoftwareEngineering #TelAviv #Remote

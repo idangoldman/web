@@ -8,7 +8,7 @@ tags:
 publish: true
 ---
 
-### Hello old friend,
+## Hello old friend
 
 **Great News**, StaticPage is in full-time development mode and will be released on May 1st.
 

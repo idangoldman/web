@@ -8,7 +8,7 @@ tags:
 publish: true
 ---
 
-### Hello, how are you doing?
+## Hello, how are you doing?
 
 What a month it has been... I can sum it up by new LOGO, new website, new feature, new service, and StaticPage is in public beta.
 
@@ -16,7 +16,7 @@ What a month it has been... I can sum it up by new LOGO, new website, new featur
 
 StaticPage has been put aside for too long and now I’m back working on it full-time. Here is a list of things that were done this month:
 
-### NEW Logo &amp; Website
+### NEW Logo & Website
 
 YES! After having the same Coming Soon page for a long time, with help from a friend we have rebranded StaticPage. The outcome, an awesome logo and a simple website to start telling the story of StaticPage.
 
@@ -24,7 +24,7 @@ YES! After having the same Coming Soon page for a long time, with help from a fr
 
 At first I didn't understand why this feature should be part of the basic features package StaticPage should offer to its users and now I can’t live without it! Now, when creating a new page, there are 4 preset templates to choose from or a blank one to start fresh.
 
-### Bugs were taken care of.
+### Bugs were taken care of
 
 That’s right! You have reported various bugs and they are all sleeping with the fishes. Jokes aside, please let me know when you will find more of those, so I could fix them too.
 
@@ -44,7 +44,7 @@ Check out my credentials on [LinkedIn](https://www.linkedin.com/in/idangoldman/)
 
 ### Haven’t guessed it yet?
 
-The link to StaticPage’s new website: ~~https://staticpage.io~~
+The link to StaticPage’s new website: ~~<https://staticpage.io>~~
 
 Meanwhile, have fun and enjoy the day! :)
 Idan.

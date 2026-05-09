@@ -11,20 +11,20 @@ publish: true
 
 [Schedule a Talk](https://cal.com/idangoldman/schedule-a-talk)
 
-## Been There, Built That;
+## Been There, Built That
 
 I turn technical chaos into systems that work, whether that’s modernizing your codebase, mentoring your team, or being your technical advisor.
 
 ### Technical Foundation
 
-#### Analysis &amp; Audit
+#### Analysis & Audit
 
 - Legacy codebase assessment and technical debt evaluation
 - Architecture reviews and scalability planning
 - Performance auditing and optimization strategies
 - Security vulnerability assessments
 
-#### Documentation &amp; Guidelines
+#### Documentation & Guidelines
 
 - Technical documentation that teams actually use
 - Development guidelines and coding standards
@@ -47,21 +47,21 @@ I turn technical chaos into systems that work, whether that’s modernizing your
 - Clean architecture implementation
 - Code review processes that scale
 
-#### Accessibility &amp; Internationalization
+#### Accessibility & Internationalization
 
 - A11y compliance and accessibility auditing
-- I18n &amp; L10n implementation strategies
+- I18n & L10n implementation strategies
 - RTL-LTR support for global applications
 - WCAG compliance and testing frameworks
 
-#### Build &amp; Deploy Optimization
+#### Build & Deploy Optimization
 
 - Webpack/Vite/ESBuild configuration and optimization
 - Performance monitoring and Core Web Vitals improvement
 - Asset optimization and delivery strategies
 - DevOps workflow automation
 
-### Leadership &amp; Mentorship
+### Leadership & Mentorship
 
 #### Team Development
 
@@ -105,7 +105,7 @@ Before diving into any project, I like to understand your specific situation, ch
 - **LinkedIn**: [Connect with me](https://www.linkedin.com/in/idangoldman/) for professional networking.
 - **GitHub**: [Review my code](https://github.com/idangoldman/) to see my technical approach.
 
-### What to include in your first message:
+### What to include in your first message
 
 - Brief overview of your current situation and main challenge
 - Timeline and scope (if you have them in mind)

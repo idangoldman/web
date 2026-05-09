@@ -27,12 +27,16 @@ export const defaultContentPageLayout: PageLayout = {
     }),
     Component.DesktopOnly(
       Component.Explorer({
-        title: "Notebook",
         folderClickBehavior: "link",
         folderDefaultState: "open",
         useSavedState: true,
         // Only show the notebook folder in the sidebar — hide top-level pages like about/studio
-        filterFn: (node) => node.slugSegment !== "tags"
+        filterFn: (node) => node.slugSegment !== "tags",
+        mapFn: (node) => {
+          if (node.isFolder && node.children.length === 0 && node.data) {
+            node.isFolder = false
+          }
+        }
       })
     )
   ],
@@ -46,7 +50,7 @@ export const defaultListPageLayout: PageLayout = {
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
     Component.Flex({
-      components: [{ Component: Component.Search(), grow: true }, { Component: Component.Darkmode() }]
+      components: [{ Component: Component.Search() }, { Component: Component.Darkmode() }]
     })
   ],
   right: []

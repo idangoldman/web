@@ -5,7 +5,7 @@ publish: true
 ---
 
 > All a web developer really needs for the creative journey ↩
-> a **_terminal_** &amp;&amp; a **_browser_**.
+> a **_terminal_** && a **_browser_**.
 >
 > _— Idan Goldman_
 

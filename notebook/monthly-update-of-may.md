@@ -8,7 +8,7 @@ tags:
 publish: true
 ---
 
-### Hello, how are you doing?
+## Hello, how are you doing?
 
 I’m doing well, thanks for asking! 😊
 
@@ -32,7 +32,7 @@ As part of my effort to promote StaticPage and also understand user needs, I hav
 
 It sucks but Blog, Docs, and Support pages are still under heavy development and won’t be joining us in this newsletter. They will pop up on the website during June! So, keep an eye on StaticPage.io. 😉
 
-## Features are coming!
+## Features are coming
 
 I know, I haven’t released any new features this month! Please bear with me while I’m building decent marketing and support channels for StaticPage to grow upon. These channels help me communicate with you better and understand what you need from a product like StaticPage. I already have a couple of features planned that will make your work awesome! 🥳
 

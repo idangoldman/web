@@ -17,17 +17,17 @@ Link to my [GitHub page](https://github.com/idangoldman) and [LinkedIn profile](
   - [Frameworks and Backend](#frameworks-and-backend)
   - [CMSs' and SSGs'](#cmss-and-ssgs)
 - [Products and Open Source](#products-and-open-source)
-  - [StaticPage](#staticpage-website)
-  - [ToDoin](#todoin-web-store)
+  - [StaticPage](#staticpage-github)
+  - [ToDoin](#todoin-github)
   - [Kit](#kit-github)
   - [Feature](#feature-github)
-  - [Rebo](#rebo-github)
+  - [Rebo](#rebo)
 - [Client Work](#client-work)
   - [Achievements](#achievements)
 
 ## Introduction
 
-Hello, my name is Idan and I have been part of the tech industry for over 10 years, mostly focused on Frontend technologies and languages. Besides hands-on coding, I have experience managing small to medium R&amp;D teams with Backend, Frontend, and QA team members. Also, managing remote freelance developers on various client projects. My latest cutting edge and bleeding tech experiences are actually teaching and passing on knowledge to the younger generation of developers.
+Hello, my name is Idan and I have been part of the tech industry for over 10 years, mostly focused on Frontend technologies and languages. Besides hands-on coding, I have experience managing small to medium R&D teams with Backend, Frontend, and QA team members. Also, managing remote freelance developers on various client projects. My latest cutting edge and bleeding tech experiences are actually teaching and passing on knowledge to the younger generation of developers.
 
 ## Skill Sets
 
@@ -63,7 +63,7 @@ It is powered by `Flask`, `PostgreSQL`, `Flight.js` (dead Twitter event-base fra
 
 All developers have their shot at making a to-do list app, this is my variation as a chrome extension. The most differentiating feature of this to-do extension is the Private to-dos. Why you need private to-dos you ask? For me, working in an office environment created the need to keep some to-dos private.
 
-I have built this product with `Backbone` &amp; `SASS` and then converted it to `React` app but the `React` version hasn't seen the light of day. I have created all the graphic materials except the logo, this credit goes to my friend.
+I have built this product with `Backbone` & `SASS` and then converted it to `React` app but the `React` version hasn't seen the light of day. I have created all the graphic materials except the logo, this credit goes to my friend.
 
 ### Kit ([GitHub](https://github.com/idangoldman/kit))
 

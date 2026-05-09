@@ -5,8 +5,6 @@ description: 'For years, I wanted a way to write and just post the damn thing…
 publish: false
 ---
 
-# Content is King
-
 For years, I wanted a way to write and just post the damn thing… which got me blocked from writing again and again while trying to build the damn thing.
 
 Now, I’m trying a new thing (for me), writing about how to build the damn thing while building the damn thing, dog feeding myself if you will.
@@ -71,8 +69,8 @@ So, what do we got here? `workflows` and `quartz` folders, one for building and 
 
 ### Why Forgejo and Quartz?
 
-- *_Forgejo_* is easy, I’m already enjoy using it as my self-hosted git server and action runner. It runs blazing fast (in my set up) and has a snappy web ui which helps.
-- *_Quartz_*… don’t know yet, will see. Seems like it’s made for generating websites out of *Obsidian* like content folders and comes with supporting plugins to keep same content structures on the web.
+- **Forgejo** is easy, I’m already enjoy using it as my self-hosted git server and action runner. It runs blazing fast (in my set up) and has a snappy web ui which helps.
+- **Quartz**… don’t know yet, will see. Seems like it’s made for generating websites out of *Obsidian* like content folders and comes with supporting plugins to keep same content structures on the web.
 
 ## Workflows
 

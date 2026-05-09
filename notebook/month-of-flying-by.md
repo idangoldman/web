@@ -12,7 +12,7 @@ publish: true
 
 Hello, how was your month? It was a good and relaxing month for me, the "independence" part starting to sink in. Making me shift focus from doing only things that will bring immediate value to things that need more time to harvest. For example: meeting people, creating new connections, maintaining early ones too instead of building a web agency.
 
-This brings my next point, I have met a few interesting people this month and had the pleasure to be interviewed at [IndieTLV](https://indietlv.com/)'s Hack Night. This event happens every 2 weeks at the Google Campus in Tel Aviv, you should check it out! Oh, and you can watch the interview [here](https://www.youtube.com/watch?v=kMhQtl4VHv4) (in Hebrew).
+This brings my next point, I have met a few interesting people this month and had the pleasure to be interviewed at [IndieTLV](https://indietlv.com/)'s Hack Night. This event happens every 2 weeks at the Google Campus in Tel Aviv, you should check it out! Oh, and you can watch the interview on [YouTube](https://www.youtube.com/watch?v=kMhQtl4VHv4) (in Hebrew).
 
 **Last thing**, the ~~new website~~ is up and running.
 

@@ -10,7 +10,7 @@ publish: true
 >
 > _— Idan Goldman_
 
-## Digital Pathfinder, guiding through code mazes.
+## Digital Pathfinder, guiding through code mazes
 
 Well, I'm me, what do you mean? No really... Heyyy, I'm Idan Goldman.
 
@@ -28,7 +28,7 @@ To be fair, template engines, design systems, and JavaScript frameworks helped A
 
 **2008-2012**: Started the classic design-to-code email and website pages grind at _Reconcept_, then _IQTech_. Moved to _YIT_ working on large-scale content websites like _Xnet_ and _Ynet_ while running my freelance business _IdanSmith_. Learned the hard way that clients always want changes five minutes before deadline.
 
-**2012-2014**: Joined _Netvertise_ as Frontend Developer, climbed to R&amp;D Team Leader managing 8 people. Led complete codebase rebuild of a SaaS product and managed the handoff to an abroad team. Discovered that good communication beats perfect code and being kind while managing people comes along way.
+**2012-2014**: Joined _Netvertise_ as Frontend Developer, climbed to R&D Team Leader managing 8 people. Led complete codebase rebuild of a SaaS product and managed the handoff to an abroad team. Discovered that good communication beats perfect code and being kind while managing people comes along way.
 
 **2014-2016**: Experienced that start-up life at _OpenWeb_ as a Frontend Engineer collaborating on creation of a design system and coding embedded iframe social components. Promoted to _WordPress_ Lead Developer managing 4 websites and distributed freelance teams. First real taste of leadership across time zones.
 
@@ -44,7 +44,7 @@ Here's the thing, I don't just turn technical chaos into systems that work. I tu
 
 Whether that's teams shipping buggy code every Friday, senior devs who can't onboard juniors, helping teams stop writing spaghetti code, or figuring out why the CI/CD pipeline breaks every Tuesday. I'm always asking: "_How do we make sure everyone learns from this?_" While fixing and documenting the findings.
 
-### My approach is pretty simple:
+### My approach is pretty simple
 
 - **Figure** out the real problem, not just what people think it is and patch it.
 - **Explain** stuff in plain English, no technical jargon without context.
