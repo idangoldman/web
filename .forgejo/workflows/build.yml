@@ -43,7 +43,9 @@ jobs:
 
       - name: Set version
         id: v
-        run: echo "value=$(date -u +%Y.%m.%d-%H%M%S)" >> $GITHUB_OUTPUT
+        run: |
+          echo "value=$(date -u +%Y.%m.%d-%H%M%S)" >> $GITHUB_OUTPUT
+          echo "VERSION=${{ steps.v.outputs.value }}"
 
       - name: Build and Package
         env:
@@ -56,7 +58,7 @@ jobs:
       - name: Upload Package
         env:
           VERSION: ${{ steps.v.outputs.value }}
-          FILE_NAME: ${VERSION}-site.zip
+          FILE_NAME: ${{ steps.v.outputs.value }}-site.zip
         run: |
           curl --fail \
             -H "Authorization: token ${{ secrets.ACTION_RUNNER_TOKEN }}" \
