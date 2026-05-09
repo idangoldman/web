@@ -70,7 +70,6 @@ const config: QuartzConfig = {
       Plugin.ContentIndex({ enableSiteMap: true, enableRSS: true }),
       Plugin.Assets(),
       Plugin.Static(),
-      Plugin.Favicon(),
       Plugin.NotFoundPage(),
       Plugin.CustomOgImages() // generates per-page OG images via Satori
     ]
