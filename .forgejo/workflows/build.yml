@@ -58,7 +58,7 @@ jobs:
         run: |
           curl --fail \
             -H "Authorization: token ${{ secrets.ACTION_RUNNER_TOKEN }}" \
-            --upload-file dist/site-${VERSION}.zip \
+            --upload-file ${QUARTZ_DIR}/site-${VERSION}.zip \
             "https://git.goldman.id/api/packages/${{ github.repository_owner }}/generic/web/${VERSION}/site-${VERSION}.zip"
 
       # - name: Force push tag
