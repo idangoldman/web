@@ -3,52 +3,14 @@ name: Publish
 on:
   workflow_dispatch:
 
-  # push:
-  #   branches:
-  #     - main
-
-  # tags:
-  #   - "v1.0.0"
+  tags:
+    - "*"
 
 jobs:
   build:
     runs-on: ubuntu
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - run: echo "Building site..."
-      # - name: Fetch Quartz
-      #   run: |
-      #     git clone --depth=1 --branch v4.5.0 https://github.com/jackyzha0/quartz.git /tmp/quartz
-      #     rm -rf /tmp/quartz/content
-
-      # - name: Stage content
-      #   run: |
-      #     rsync -a --exclude='.forgejo' --exclude='.git' ./ /tmp/quartz/content/
-      #     # Rename home.md -> index.md, content.md -> index.md
-      #     [ -f /tmp/quartz/content/home.md ] && mv /tmp/quartz/content/home.md /tmp/quartz/content/index.md
-      #     find /tmp/quartz/content -name 'content.md' -execdir mv content.md index.md \;
-
-      # - name: Apply custom Quartz config
-      #   run: cp -r .forgejo/quartz/* /tmp/quartz/
-
-      # - name: Install & build
-      #   working-directory: /tmp/quartz
-      #   run: |
-      #     npm ci
-      #     npx quartz build
-
-      # - name: Upload artifact
-      #   uses: forgejo/upload-artifact@v4
-      #   with:
-      #     name: site
-      #     path: /tmp/quartz/public
-      #     retention-days: 7
-  deploy:
-    runs-on: ubuntu
-    steps:
-      - run: echo "Deploying site..."
+      - run: echo "Publishing site..."
       # - name: Download artifact
       #   uses: forgejo/download-artifact@v4
       #   with:
