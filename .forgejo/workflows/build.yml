@@ -43,7 +43,7 @@ jobs:
 
       - name: Set version
         id: v
-        run: echo "value=$(date -u +%Y.%m.%d.%H.%M.%S)" >> $GITHUB_OUTPUT
+        run: echo "value=$(date -u +%Y.%m.%d-%H%M%S)" >> $GITHUB_OUTPUT
 
       - name: Build and Package
         env:
@@ -56,21 +56,20 @@ jobs:
       - name: Upload Package
         env:
           VERSION: ${{ steps.v.outputs.value }}
+          FILE_NAME: ${VERSION}-site.zip
         run: |
           curl --fail \
             -H "Authorization: token ${{ secrets.ACTION_RUNNER_TOKEN }}" \
-            --upload-file ${QUARTZ_DIR}/${VERSION}.zip \
-            "https://git.goldman.id/api/packages/${{ github.repository_owner }}/generic/web/${VERSION}/${VERSION}.zip"
-          rm -frv ${QUARTZ_DIR}/${VERSION}.zip
+            --upload-file ${QUARTZ_DIR}/${FILE_NAME} \
+            "https://git.goldman.id/api/packages/${{ github.repository_owner }}/generic/web/${VERSION}/${FILE_NAME}"
+          rm -frv ${QUARTZ_DIR}/${FILE_NAME}
 
-      # - name: Force push tag
-      #   run: |
-      #     # 1. Identify the user for the commit/tag
-      #     git config user.name "forgejo-actions[bot]"
-      #     git config user.email "actions@noreply.forgejo"
+      - name: Force push tag
+        env:
+          VERSION: ${{ steps.v.outputs.value }}
+        run: |
+          git config user.name "forgejo-actions-bot"
+          git config user.email "actions@noreply.forgejo"
 
-      #     # 2. Create or update the tag locally to point to current commit
-      #     git tag -f v1.0.0
-
-      #     # 3. Force push to the remote
-      #     git push origin v1.0.0 --force
+          git tag --force ${VERSION}
+          git push origin ${VERSION} --force
