@@ -1,0 +1,63 @@
+name: Build and Package
+
+on:
+  workflow_dispatch:
+
+  push:
+    branches:
+      - main
+
+env:
+  QUARTZ_VERSION: v4.5.0
+  QUARTZ_DIR: .quartz-build
+
+jobs:
+  build:
+    runs-on: ubuntu
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Fetch all history for tagging
+          token: ${{ secrets.ACTION_RUNNER_TOKEN }} # ${{ secrets.FORGEJO_PAT }}
+
+      - name: Set up Quartz
+        run: |
+          mkdir -p ${QUARTZ_DIR}
+          git clone --depth=1 --branch ${QUARTZ_VERSION} https://github.com/jackyzha0/quartz.git ${QUARTZ_DIR}
+          cd ${QUARTZ_DIR} && npm ci
+
+      - name: Copy Custom Files
+        run: |
+          # Copy any custom files needed for the build
+          cp -r .forgejo/quartz/* ${QUARTZ_DIR}/
+
+      - name: Set version
+        id: v
+        run: echo "value=$(date -u +%Y.%m.%d)-${GITHUB_SHA::7}" >> $GITHUB_OUTPUT
+
+      - name: Build and Package
+        working-directory: ${QUARTZ_DIR}
+        run: |
+          npx quartz build --directory ../ --output public
+          zip -r site-${{ steps.v.outputs.value }}.zip public
+
+      # - name: Upload to Forgejo packages
+      #   env:
+      #     TOKEN: ${{ secrets.FORGEJO_TOKEN }}
+      #     VERSION: ${{ steps.v.outputs.value }}
+      #   run: |
+      #     curl --fail --user "idangoldman:$TOKEN" \
+      #       --upload-file dist/site-${VERSION}.zip \
+      #       "https://git.goldman.id/api/packages/idangoldman/generic/site/${VERSION}/site-${VERSION}.zip"
+
+      # - name: Force push tag
+      #   run: |
+      #     # 1. Identify the user for the commit/tag
+      #     git config user.name "forgejo-actions[bot]"
+      #     git config user.email "actions@noreply.forgejo"
+
+      #     # 2. Create or update the tag locally to point to current commit
+      #     git tag -f v1.0.0
+
+      #     # 3. Force push to the remote
+      #     git push origin v1.0.0 --force

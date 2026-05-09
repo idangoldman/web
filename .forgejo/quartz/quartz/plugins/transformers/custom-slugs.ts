@@ -1,8 +1,8 @@
 import { QuartzTransformerPlugin } from "../types";
 import { FullSlug } from "../../util/path";
 
-export const CustomSlugs: QuartzTransformerPlugin = () => ({
-  name: "CustomSlugs",
+const Slugs: QuartzTransformerPlugin = () => ({
+  name: "Slugs",
   markdownPlugins() {
     return [
       () => async (_tree, file) => {
@@ -16,3 +16,5 @@ export const CustomSlugs: QuartzTransformerPlugin = () => ({
     ];
   }
 });
+
+export default Slugs;

@@ -1,25 +1,25 @@
 import { QuartzConfig } from "./quartz/cfg";
 import * as Plugin from "./quartz/plugins";
-import { CustomSlugs } from "./quartz/plugins/transformers/custom-slugs";
+import CustomSlugs from "./quartz/plugins/transformers/custom-slugs";
 
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "idan.goldman.work",
+    pageTitle: "Idan Goldman",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
-    analytics: null, // or { provider: "plausible" } if/when you add it
+    analytics: null,
     locale: "en-US",
     baseUrl: "idan.goldman.work",
-    ignorePatterns: ["private", "templates", ".obsidian", ".forgejo"],
+    ignorePatterns: [".forgejo", "node_modules", ".git", ".quartz-build"],
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
-        code: "JetBrains Mono"
+        header: "Lexend",
+        body: "Lexend",
+        code: "IBM Plex Mono",
       },
       colors: {
         lightMode: {
