@@ -1,12 +1,13 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg";
 import * as Component from "./quartz/components";
+import CustomFooter from "./quartz/components/CustomFooter"
 
 // Components shared across all pages: head, header, footer
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
   afterBody: [],
-  footer: Component.Footer({
+  footer: CustomFooter({
     links: {
       GitHub: "https://github.com/idangoldman",
       LinkedIn: "https://www.linkedin.com/in/idangoldman/",
