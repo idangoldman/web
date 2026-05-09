@@ -20,7 +20,15 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.ACTION_RUNNER_TOKEN }}
 
+      - name: Cache Setup Quartz
+        id: cache-quartz
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.QUARTZ_DIR }}
+          key: quartz-${{ env.QUARTZ_VERSION }}-${{ runner.os }}
+
       - name: Setup Quartz
+        if: steps.cache-quartz.outputs.cache-hit != 'true'
         run: |
           mkdir -p ${QUARTZ_DIR}
           git config --global advice.detachedHead false
@@ -48,9 +56,10 @@ jobs:
         env:
           VERSION: ${{ steps.v.outputs.value }}
         run: |
-          curl --fail --user "${{ forgejo.actor }}:${{ secrets.ACTION_RUNNER_TOKEN }}" \
-            --upload-file ${QUARTZ_DIR}/site-${VERSION}.zip \
-            "https://git.goldman.id/api/packages/${{ forgejo.actor }}/generic/web/${VERSION}/site-${VERSION}.zip"
+          curl --fail \
+            -H "Authorization: token ${{ secrets.ACTION_RUNNER_TOKEN }}" \
+            --upload-file dist/site-${VERSION}.zip \
+            "https://git.goldman.id/api/packages/${{ github.repository_owner }}/generic/web/${VERSION}/site-${VERSION}.zip"
 
       # - name: Force push tag
       #   run: |
