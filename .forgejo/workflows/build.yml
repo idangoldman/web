@@ -25,7 +25,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ${{ env.QUARTZ_DIR }}
-          key: quartz-${{ env.QUARTZ_VERSION }}-${{ runner.os }}
+          key: quartz-${{ env.QUARTZ_VERSION }}
 
       - name: Setup Quartz
         if: steps.cache-quartz.outputs.cache-hit != 'true'

@@ -9,6 +9,10 @@ const Slugs: QuartzTransformerPlugin = () => ({
         const slug = file.data.slug as FullSlug | undefined;
         if (!slug) return;
 
+        if (slug === "/home/content.md") {
+          file.data.slug = "index" as FullSlug;
+        }
+
         if (slug.endsWith("/content")) {
           file.data.slug = slug.replace(/\/content$/, "/index") as FullSlug;
         }
