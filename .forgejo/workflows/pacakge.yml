@@ -9,7 +9,7 @@ on:
 
 env:
   QUARTZ_VERSION: v4.5.2
-  QUARTZ_DIR: .quartz-build
+  BUILD_DIR: .build
 
 jobs:
   build:
@@ -31,7 +31,7 @@ jobs:
         uses: actions/cache@v4
         with:
           key: cache-setup-${{ env.QUARTZ_VERSION }}
-          path: ${{ env.QUARTZ_DIR }}
+          path: ${{ env.BUILD_DIR }}
 
       - name: Setup
         if: steps.cache-setup.outputs.cache-hit != 'true'
@@ -40,23 +40,23 @@ jobs:
             --branch ${{ env.QUARTZ_VERSION }} \
             --depth=1 \
             https://github.com/jackyzha0/quartz.git \
-            ${{ env.QUARTZ_DIR }}
+            ${{ env.BUILD_DIR }}
 
-          cd ${{ env.QUARTZ_DIR }}
+          cd ${{ env.BUILD_DIR }}
           npm ci
 
       - name: Copy Custom Files
         run: |
-          cp -rv .forgejo/quartz/* ${{ env.QUARTZ_DIR }}/
+          cp -rv .forgejo/quartz/* ${{ env.BUILD_DIR }}/
 
       - name: Build
         run: |
-          cd ${{ env.QUARTZ_DIR }}
+          cd ${{ env.BUILD_DIR }}
           npx quartz build --directory ../ --output public
 
       - name: Package
         run: |
-          zip -r "${{ env.SITE_VERSION }}-site.zip" "${{ env.QUARTZ_DIR }}/public"
+          zip -r "${{ env.SITE_VERSION }}-site.zip" "${{ env.BUILD_DIR }}/public"
 
       - name: Upload
         run: |
