@@ -64,7 +64,7 @@ jobs:
 
           curl --fail \
             -H "Authorization: token ${{ secrets.ACTION_RUNNER_TOKEN }}" \
-            --upload-file "${{ env.QUARTZ_DIR }}/$FILE_NAME" \
+            --upload-file "$FILE_NAME" \
             "https://git.goldman.id/api/packages/${{ github.repository_owner }}/generic/web/${{ env.SITE_VERSION }}/$FILE_NAME"
 
       - name: Push Tag
