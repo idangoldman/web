@@ -1,0 +1,76 @@
+name: Build and Package
+
+on:
+  workflow_dispatch:
+
+  push:
+    branches:
+      - main
+
+env:
+  QUARTZ_VERSION: v4.5.2
+  QUARTZ_DIR: .quartz-build
+
+jobs:
+  build:
+    runs-on: ubuntu
+    steps:
+      - name: Set Version
+        run: |
+          VERSION=$(date -u +%Y.%m.%d-%H%M%S)
+          echo "SITE_VERSION=$VERSION" >> $FORGEJO_ENV
+          echo $VERSION
+
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.ACTION_RUNNER_TOKEN }}
+
+      - name: Cache Setup
+        id: cache-setup
+        uses: actions/cache@v4
+        with:
+          key: cache-setup-${{ env.QUARTZ_VERSION }}
+          path: ${{ env.QUARTZ_DIR }}
+
+      - name: Setup
+        if: steps.cache-setup.outputs.cache-hit != 'true'
+        run: |
+          git clone \
+            --branch ${{ env.QUARTZ_VERSION }} \
+            --depth=1 \
+            https://github.com/jackyzha0/quartz.git \
+            ${{ env.QUARTZ_DIR }}
+
+          cd ${{ env.QUARTZ_DIR }}
+          npm ci
+
+      - name: Copy Custom Files
+        run: |
+          cp -rv .forgejo/quartz/* ${{ env.QUARTZ_DIR }}/
+
+      - name: Build
+        run: |
+          cd ${{ env.QUARTZ_DIR }}
+          npx quartz build --directory ../ --output public
+
+      - name: Package
+        run: |
+          zip -r "${{ env.SITE_VERSION }}-site.zip" "${{ env.QUARTZ_DIR }}/public"
+
+      - name: Upload
+        run: |
+          FILE_NAME="${{ env.SITE_VERSION }}-site.zip"
+
+          curl --fail \
+            -H "Authorization: token ${{ secrets.ACTION_RUNNER_TOKEN }}" \
+            --upload-file "${{ env.QUARTZ_DIR }}/$FILE_NAME" \
+            "https://git.goldman.id/api/packages/${{ github.repository_owner }}/generic/web/${{ env.SITE_VERSION }}/$FILE_NAME"
+
+      - name: Push Tag
+        run: |
+          git config user.name "forgejo-actions-bot"
+          git config user.email "actions@noreply.forgejo"
+
+          git tag --force ${{ env.SITE_VERSION }}
+          git push origin ${{ env.SITE_VERSION }} --force
