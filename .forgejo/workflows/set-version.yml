@@ -12,3 +12,12 @@ jobs:
           VERSION=$(date -u +%Y%m%d-%H.%M.%S)
           echo "SITE_VERSION=$VERSION" >> $FORGEJO_ENV
           echo $VERSION
+
+      - name: TZ sanity check
+        run: |
+          echo "TZ env: $TZ"
+          echo "localtime: $(readlink -f /etc/localtime 2>/dev/null || ls -la /etc/localtime)"
+          echo "timezone file: $(cat /etc/timezone 2>/dev/null || echo 'missing')"
+          cat /etc/localtime | head -c 4
+          date
+          date -u
