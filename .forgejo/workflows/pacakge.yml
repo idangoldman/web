@@ -3,9 +3,9 @@ name: Build and Package
 on:
   workflow_dispatch:
 
-  # push:
-  #   branches:
-  #     - main
+  push:
+    branches:
+      - main
 
 env:
   QUARTZ_VERSION: v4.5.2
@@ -17,7 +17,7 @@ jobs:
     steps:
       - name: Set Version
         run: |
-          VERSION=$(date -u +%Y.%m.%d-%H%M%S)
+          VERSION=$(date +%Y%m%d-%H%M%S)
           echo "SITE_VERSION=$VERSION" >> $FORGEJO_ENV
           echo $VERSION
 
