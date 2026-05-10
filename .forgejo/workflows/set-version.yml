@@ -9,6 +9,6 @@ jobs:
     steps:
       - name: Set Version
         run: |
-          VERSION=$(date -u +%Y.%m.%d-%H%M%S)
+          VERSION=$(date -u +%Y%m%d-%H.%M.%S)
           echo "SITE_VERSION=$VERSION" >> $FORGEJO_ENV
           echo $VERSION
