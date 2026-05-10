@@ -1,0 +1,14 @@
+name: Set Version
+
+on:
+  workflow_dispatch:
+
+jobs:
+  set-version:
+    runs-on: ubuntu
+    steps:
+      - name: Set Version
+        run: |
+          VERSION=$(date -u +%Y.%m.%d-%H%M%S)
+          echo "SITE_VERSION=$VERSION" >> $FORGEJO_ENV
+          echo $VERSION
