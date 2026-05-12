@@ -1,7 +1,7 @@
 ---
 title: Collaborate
-published: '2025-07-13T13:48:49+03:00'
-publish: true
+date: '2025-07-13T13:48:49+03:00'
+draft: false
 ---
 
 > Code should be _easy_ to **read** and _joyful_ to **write**

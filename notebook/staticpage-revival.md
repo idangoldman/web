@@ -1,11 +1,11 @@
 ---
 title: 'StaticPage Revival'
-published: '2019-04-29T12:00:00+03:00'
+date: '2019-04-29T12:00:00+03:00'
 description: 'Great News, StaticPage is in full-time development mode and will be released on May 1st.'
 tags:
   - StaticPage
   - Newsletter
-publish: true
+draft: false
 ---
 
 ## Hello old friend

@@ -1,7 +1,7 @@
 ---
 title: About
-published: '2025-07-13T13:49:49+03:00'
-publish: true
+date: '2025-07-13T13:49:49+03:00'
+draft: false
 ---
 
 > Self-taught code hobbyist, evolved into a savant, UUH a cookie!

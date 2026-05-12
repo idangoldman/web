@@ -1,11 +1,11 @@
 ---
 title: 'Week of Holidays'
-published: '2019-04-29T16:58:00+03:00'
+date: '2019-04-29T16:58:00+03:00'
 description: "My went great, spend some family and got some work done using the new routine tools for last week's update. Let's see some stats today!"
 tags:
   - Journaling
   - Newsletter
-publish: true
+draft: false
 ---
 
 ## TL;DR

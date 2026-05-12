@@ -1,11 +1,11 @@
 ---
 title: 'Monthly Update of June'
-published: '2019-07-01T19:23:00+03:00'
+date: '2019-07-01T19:23:00+03:00'
 description: 'Hello, how are you doing? I’m good, thank you! Nothing much to update on this month I’m afraid. Still spreading the word and heading your thoughts on StaticPage as a product and where it should go.'
 tags:
   - StaticPage
   - Newsletter
-publish: true
+draft: false
 ---
 
 ### Hello, how are you doing?

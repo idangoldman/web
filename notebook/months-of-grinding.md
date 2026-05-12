@@ -1,11 +1,11 @@
 ---
 title: 'Months of Grinding'
-published: '2019-12-03T16:40:00+02:00'
+date: '2019-12-03T16:40:00+02:00'
 description: 'Mine went as same shit different day, putting the hours and grinding my skills in hope to get at this freelance game.'
 tags:
   - Journaling
   - Newsletter
-publish: true
+draft: false
 ---
 
 ## TL;DR

@@ -1,11 +1,11 @@
 ---
 title: 'Months of Adjusting'
-published: '2019-11-04T09:00:00+02:00'
+date: '2019-11-04T09:00:00+02:00'
 description: 'Battling myself for the “right” decision on the StaticPage pivot or not question. Which to be honest still hunts me but I have decided to move forward with it and make StaticPage a real page builder for various theme supporting platforms... But this is not what this post about.'
 tags:
   - Journaling
   - Newsletter
-publish: true
+draft: false
 ---
 
 ## TL;DR

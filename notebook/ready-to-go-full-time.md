@@ -1,6 +1,6 @@
 ---
 title: 'Ready to Go Full-Time'
-published: '2025-08-31T11:14:46+03:00'
+date: '2025-08-31T11:14:46+03:00'
 description: 'After 5+ years running 123Code, I closed shop and went on a power-up hiatus with included battery replacement. Now, I’m charged-up and looking for my next full-time role. Keep reading for the Why and Whats.'
 tags:
   - Journaling
@@ -9,7 +9,7 @@ tags:
   - SoftwareEngineering
   - TechJobs
   - TelAviv
-publish: true
+draft: false
 ---
 
 After 5+ years running 123Code, I closed shop and went on a power-up hiatus with included battery replacement. Now, I’m charged-up and looking for my next full-time role. Keep reading for the Why and Whats.

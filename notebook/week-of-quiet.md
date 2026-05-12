@@ -1,11 +1,11 @@
 ---
 title: 'Week of Quiet'
-published: '2019-05-20T16:00:00+03:00'
+date: '2019-05-20T16:00:00+03:00'
 description: 'Mine went good all things considered except the routine which went to hell. I''m partially back to work! Re-recorded StaticPage''s walkthrough video. Published Fiverr gig "Create a Coming Soon Page in 1 Day". Got more traction on Twitter with the help of a pen pal, and got deeper into the rabbit hole of productivity apps.'
 tags:
   - Journaling
   - Newsletter
-publish: true
+draft: false
 ---
 
 ## TL;DR

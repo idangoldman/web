@@ -1,7 +1,7 @@
 ---
 title: Home
-published: '2025-07-24T12:05:47+03:00'
-publish: true
+date: '2025-07-24T12:05:47+03:00'
+draft: false
 ---
 
 ## Polyglot Technology Leader

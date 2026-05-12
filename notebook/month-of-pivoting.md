@@ -1,11 +1,11 @@
 ---
 title: 'Month of Pivoting'
-published: '2019-08-05T21:01:00+03:00'
+date: '2019-08-05T21:01:00+03:00'
 description: 'My month was split into two parts, before vacation and after.'
 tags:
   - Journaling
   - Newsletter
-publish: true
+draft: false
 ---
 
 ## TL;DR

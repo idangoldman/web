@@ -1,11 +1,11 @@
 ---
 title: 'Month of Flying By'
-published: '2019-07-01T18:06:00+03:00'
+date: '2019-07-01T18:06:00+03:00'
 description: 'It was a good and relaxing month for me, the "independence" part starting to sink in. Making me shift focus from doing only things that will bring immediate value to things that need more time to harvest. For example: meeting people, creating new connections, maintaining early ones too instead of building a web agency.'
 tags:
   - Journaling
   - Newsletter
-publish: true
+draft: false
 ---
 
 ## TL;DR

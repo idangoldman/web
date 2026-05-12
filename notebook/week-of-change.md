@@ -1,11 +1,11 @@
 ---
 title: 'Week of Change'
-published: '2019-04-22T16:22:00+03:00'
+date: '2019-04-22T16:22:00+03:00'
 description: 'My week went solid. Released a StaticPage templates feature and instead of continuing to build a new landing page. I took a step back and thought about my near future goals and working routine.'
 tags:
   - Journaling
   - Newsletter
-publish: true
+draft: false
 ---
 
 ## TL;DR

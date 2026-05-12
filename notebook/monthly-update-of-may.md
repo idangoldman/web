@@ -1,11 +1,11 @@
 ---
 title: 'Monthly Update of May'
-published: '2019-06-03T20:04:00+03:00'
+date: '2019-06-03T20:04:00+03:00'
 description: 'I’m doing well, thanks for asking! 😊 Last month was all about spreading the word, video and fixing some more bugs.'
 tags:
   - StaticPage
   - Newsletter
-publish: true
+draft: false
 ---
 
 ## Hello, how are you doing?

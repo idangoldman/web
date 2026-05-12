@@ -1,11 +1,11 @@
 ---
 title: "April Fool's Beginning"
-published: '2019-04-01T16:40:00+03:00'
+date: '2019-04-01T16:40:00+03:00'
 description: "Hello friends, family, and people I met along the way! I'm starting a journey as a Bootstrapper and will be launching a product on May 1st."
 tags:
   - Journaling
   - Newsletter
-publish: true
+draft: false
 ---
 
 ## TL;DR

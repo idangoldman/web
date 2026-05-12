@@ -1,11 +1,11 @@
 ---
 title: 'Week of Rest'
-published: '2019-05-06T16:18:00+03:00'
+date: '2019-05-06T16:18:00+03:00'
 description: 'Mine went great, deployed the new landing page on time, talked with some of you, got great advice, and even worked a bit on the upcoming video. Then I had to go through a small medical procedure that took me "out of order" for the rest of the week and from the looks of it this week too.'
 tags:
   - Journaling
   - Newsletter
-publish: true
+draft: false
 ---
 
 ## TL;DR

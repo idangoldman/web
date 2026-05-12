@@ -1,11 +1,11 @@
 ---
 title: 'Month of Learning'
-published: '2019-06-03T18:45:00+03:00'
+date: '2019-06-03T18:45:00+03:00'
 description: 'Mine went awesome! Learned about what people want in their page builder, keyword research, video editing, social media posting. Oh, and the walkthrough video is out!'
 tags:
   - Journaling
   - Newsletter
-publish: true
+draft: false
 ---
 
 ## TL;DR

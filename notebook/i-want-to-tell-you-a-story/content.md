@@ -1,10 +1,10 @@
 ---
 title: 'I want to tell you a story.'
-published: '2017-06-21T23:44:00+03:00'
+date: '2017-06-21T23:44:00+03:00'
 description: 'As it sounds StaticPage is a static page creator (builder if you must) for making Coming Soon, Maintenance, and 404-page templates which can be downloaded and used on your own server or website.'
 tags:
   - StaticPage
-publish: true
+draft: false
 ---
 
 ## About StaticPage

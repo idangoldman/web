@@ -1,7 +1,7 @@
 ---
 title: Studio
-published: '2025-07-22T23:50:00+03:00'
-publish: true
+date: '2025-07-22T23:50:00+03:00'
+draft: false
 ---
 
 > All a web developer really needs for the creative journey ↩

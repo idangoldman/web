@@ -1,7 +1,7 @@
 ---
 title: Notebook
-published: '2025-07-13T13:27:33+03:00'
-publish: true
+date: '2025-07-13T13:27:33+03:00'
+draft: false
 ---
 
 > **_Welcome to my continuous public archive_**,

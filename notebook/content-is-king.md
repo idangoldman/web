@@ -1,8 +1,8 @@
 ---
 title: 'Content is King'
-published: 0000-00-00
+date: '2026-05-12T00:00:00+03:00'
 description: 'For years, I wanted a way to write and just post the damn thing…'
-publish: false
+draft: true
 ---
 
 For years, I wanted a way to write and just post the damn thing… which got me blocked from writing again and again while trying to build the damn thing.

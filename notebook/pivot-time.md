@@ -1,11 +1,11 @@
 ---
 title: 'Pivot Time'
-published: '2019-08-05T20:38:00+03:00'
+date: '2019-08-05T20:38:00+03:00'
 description: 'Yes, you read it right! One thing led to another (the wireframe from the previous update) and I have decided to make a product pivot to solve a different problem.'
 tags:
   - StaticPage
   - Newsletter
-publish: true
+draft: false
 ---
 
 ## Hello, how are you doing?

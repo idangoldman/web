@@ -1,8 +1,8 @@
 ---
 title: Services
-published: '2019-11-27T14:00:00+02:00'
+date: '2019-11-27T14:00:00+02:00'
 description: "I'm good at building frontend stuff, want to hire me? Say Hello."
-publish: true
+draft: false
 ---
 
 ## TL;DR

@@ -1,11 +1,11 @@
 ---
 title: 'Feedback Week'
-published: '2019-04-15T17:01:00+03:00'
+date: '2019-04-15T17:01:00+03:00'
 description: 'Hello, how was your week? My week went horribly with the wrong marketing assumptions, followed by anxiety. On the bright side, templates feature for StaticPage is almost ready for release with 4 templates. Now, ready to retrospec and move forward.'
 tags:
   - Journaling
   - Newsletter
-publish: true
+draft: false
 ---
 
 ## TL;DR

@@ -1,11 +1,11 @@
 ---
 title: 'Public Beta is OUT!'
-published: '2019-04-30T20:14:00+03:00'
+date: '2019-04-30T20:14:00+03:00'
 description: 'What a month it has been... I can sum it up by new LOGO, new website, new feature, new service, and StaticPage is in public beta.'
 tags:
   - StaticPage
   - Newsletter
-publish: true
+draft: false
 ---
 
 ## Hello, how are you doing?

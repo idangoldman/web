@@ -1,11 +1,11 @@
 ---
 title: 'First week of spreading the word'
-published: '2019-04-08T15:43:00+03:00'
+date: '2019-04-08T15:43:00+03:00'
 description: "Hello again, how was your week? My week went fine with some initial numbers to show for, now I'm ready and excited for this week's tasks!"
 tags:
   - Journaling
   - Newsletter
-publish: true
+draft: false
 ---
 
 ## TL;DR

@@ -1,8 +1,8 @@
 ---
 title: Resume
-published: '2019-11-27T13:00:00+02:00'
+date: '2019-11-27T13:00:00+02:00'
 description: 'Link to my GitHub page and LinkedIn profile.'
-publish: true
+draft: false
 ---
 
 ## TL;DR
