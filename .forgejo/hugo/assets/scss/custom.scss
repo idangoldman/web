@@ -3,18 +3,6 @@
 :root {
   --article-font-family: 'Lexend', -apple-system, BlinkMacSystemFont, sans-serif;
   --code-font-family: 'IBM Plex Mono', ui-monospace, monospace;
-
-  --body-background: #faf8f8;
-  --accent-color: #284b63;
-  --accent-color-darker: #1d3a4f;
-  --accent-color-text: #faf8f8;
-}
-
-[data-scheme="dark"] {
-  --body-background: #161618;
-  --accent-color: #7b97aa;
-  --accent-color-darker: #5d7d92;
-  --accent-color-text: #161618;
 }
 
 body {

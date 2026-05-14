@@ -1,5 +1,5 @@
 # Pages placed under these sections will be shown on homepage and archive page.
-mainSections = ["post"]
+mainSections = ["notebook"]
 # Output page's full content in RSS.
 rssFullContent = true
 favicon        = "img/avatar.png"
@@ -11,14 +11,14 @@ SortBy              = "default"
 
 [footer]
     since      = 2019
-    customText = ""
+    customText = "Code is MIT; writing is mine."
 
 [dateFormat]
     published   = ":date_full"
     lastUpdated = ":date_full"
 
 [sidebar]
-    emoji    = "👋"
+    emoji    = "😇"
     subtitle = "ADHDer, Father, Lover, and Keyboard Typer."
     avatar   = "img/avatar.png"
 
@@ -45,13 +45,5 @@ SortBy              = "default"
     card = "summary_large_image"
 
 [colorScheme]
-    toggle  = true
-    default = "auto"
-
-## Comments
-[comments]
-    enabled  = false
-    provider = "disqus"
-
-    # See all the available configurations at https://github.com/CaiJimmy/hugo-theme-stack/blob/master/config/_default/params.toml
-    # Copy the configurations you need from there and paste it here.
+    toggle  = false
+    default = "light"

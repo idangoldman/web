@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ROOT="$(git rev-parse --show-toplevel)"
-DEST="${DEST:-$ROOT/.build-content}"
+ROOT_DIR="${ROOT_DIR:-$(git rev-parse --show-toplevel)}"
+CONTENT_DIR="${CONTENT_DIR:-$ROOT_DIR/.build-content}"
 
 # Clean and prepare destination
-rm -rf "$DEST"
-mkdir -p "$DEST"
+rm -rf "$CONTENT_DIR"
+mkdir -p "$CONTENT_DIR"
 
 # Single optimized rsync command
 rsync -a \
@@ -16,18 +16,18 @@ rsync -a \
   --exclude='/.forgejo/' \
   --exclude='/.git/' \
   --exclude='/README.md' \
-  "$ROOT/" "$DEST/"
+  "$ROOT_DIR/" "$CONTENT_DIR/"
 
 # Flatten the home directory if it exists
-if [[ -d "$DEST/home" ]]; then
-  if [[ -f "$DEST/home/content.md" ]]; then
-    mv "$DEST/home/content.md" "$DEST/_index.md"
+if [[ -d "$CONTENT_DIR/home" ]]; then
+  if [[ -f "$CONTENT_DIR/home/content.md" ]]; then
+    mv "$CONTENT_DIR/home/content.md" "$CONTENT_DIR/_index.md"
   fi
   shopt -s nullglob dotglob
-  for file in "$DEST/home"/*; do
-    mv "$file" "$DEST/"
+  for file in "$CONTENT_DIR/home"/*; do
+    mv "$file" "$CONTENT_DIR/"
   done
-  rmdir "$DEST/home"
+  rmdir "$CONTENT_DIR/home"
 fi
 
 # Process content.md files efficiently without nested loops
@@ -43,6 +43,6 @@ while IFS= read -r -d '' file; do
   else
     mv "$file" "$dir/index.md"
   fi
-done < <(find "$DEST" -name 'content.md' -print0)
+done < <(find "$CONTENT_DIR" -name 'content.md' -print0)
 
-echo "✓ Staged content at $DEST"
+echo "✓ Staged content at $CONTENT_DIR"
