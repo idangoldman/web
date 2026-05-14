@@ -3,12 +3,12 @@ name: Build and Package
 on:
   workflow_dispatch:
 
-  push:
-    branches:
-      - main
+  # push:
+  #   branches:
+  #     - main
 
 env:
-  QUARTZ_VERSION: v4.5.2
+  HUGO_THEME_STACK_VERSION: v4.0.2
   BUILD_DIR: .build
 
 jobs:
@@ -30,16 +30,16 @@ jobs:
         id: cache-setup
         uses: actions/cache@v4
         with:
-          key: cache-setup-${{ env.QUARTZ_VERSION }}
+          key: cache-setup-${{ env.HUGO_THEME_STACK_VERSION }}
           path: ${{ env.BUILD_DIR }}
 
       - name: Setup
         if: steps.cache-setup.outputs.cache-hit != 'true'
         run: |
           git clone \
-            --branch ${{ env.QUARTZ_VERSION }} \
+            --branch ${{ env.HUGO_THEME_STACK_VERSION }} \
             --depth=1 \
-            https://github.com/jackyzha0/quartz.git \
+            git@github.com:CaiJimmy/hugo-theme-stack-starter.git \
             ${{ env.BUILD_DIR }}
 
           cd ${{ env.BUILD_DIR }}
