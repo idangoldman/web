@@ -1,7 +1,7 @@
 # Change baseurl before deploy
 baseurl = "https://idan.goldman.work/"
 locale  = "en-us"
-title   = "Idan G."
+title   = "Idan Goldman"
 
 # Theme i18n support
 # See all available values at https://github.com/CaiJimmy/hugo-theme-stack/tree/master/i18n

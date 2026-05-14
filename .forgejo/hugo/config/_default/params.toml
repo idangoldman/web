@@ -11,11 +11,13 @@ SortBy              = "default"
 
 [footer]
     since      = 2019
-    customText = "Code is MIT; writing is mine."
+    customText = 'Writings are mine, and [code credits](https://github.com/idangoldman/web#license) are shared with the open source community.'
+    builtWith   = ""
+    designBy     = ""
 
 [dateFormat]
-    published   = ":date_full"
-    lastUpdated = ":date_full"
+    published   = "2006-01-02"
+    lastUpdated = "2006-01-02"
 
 [sidebar]
     emoji    = "😇"
@@ -33,7 +35,6 @@ SortBy              = "default"
 
 [widgets]
     homepage = [
-        { type = "search" },
         { type = "archives", params = { limit = 5 } },
         { type = "categories", params = { limit = 10 } },
         { type = "tag-cloud", params = { limit = 10 } },
@@ -41,7 +42,7 @@ SortBy              = "default"
     page = [{ type = "toc" }]
 
 [opengraph.twitter]
-    site = ""
+    site = "Idan Goldman"
     card = "summary_large_image"
 
 [colorScheme]
