@@ -2,7 +2,7 @@
 set -euo pipefail
 
 ROOT="$(git rev-parse --show-toplevel)"
-DEST="$ROOT/.build/content"
+DEST="${DEST:-$ROOT/.build-content}"
 
 # Clean and prepare destination
 rm -rf "$DEST"

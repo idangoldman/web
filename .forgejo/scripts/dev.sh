@@ -18,6 +18,7 @@ fi
 if [[ ! -d "$BUILD" ]]; then
   echo "→ Cloning $STARTER_REPO ($STARTER_VERSION)"
   git clone --branch "$STARTER_VERSION" --depth=1 "$STARTER_REPO" "$BUILD"
+  rm -rf "$BUILD/.git"
 else
   echo "→ Reusing $BUILD (pass --fresh to re-clone)"
 fi
@@ -28,7 +29,7 @@ cp -r "$ROOT/.forgejo/hugo/." "$BUILD/"
 
 # Stage content into .build/content (every run).
 echo "→ Staging content"
-DEST="$BUILD/content" bash "$ROOT/.forgejo/scripts/pre-content.sh"
+DEST="$BUILD/content" $ROOT/.forgejo/scripts/pre-content.sh
 
 # Serve.
 echo "→ Starting hugo serve"
