@@ -10,12 +10,11 @@ mkdir -p "$CONTENT_DIR"
 
 # Single optimized rsync command
 rsync -a \
-  --exclude='/.build-content/' \
-  --exclude='/.build/' \
   --exclude='.DS_Store' \
   --exclude='/.forgejo/' \
   --exclude='/.git/' \
   --exclude='/README.md' \
+  --exclude="/${CONTENT_DIR#$ROOT_DIR/}/" \
   "$ROOT_DIR/" "$CONTENT_DIR/"
 
 # Flatten the home directory if it exists

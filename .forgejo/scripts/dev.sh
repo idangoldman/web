@@ -4,6 +4,7 @@ set -euo pipefail
 ROOT_DIR="$(git rev-parse --show-toplevel)"
 BUILD_DIR="$ROOT_DIR/.build"
 CONTENT_DIR="$BUILD_DIR/content"
+export ROOT_DIR BUILD_DIR CONTENT_DIR
 
 # hugo-theme-stack-starter version pulled as the site base.
 STARTER_REPO="https://github.com/CaiJimmy/hugo-theme-stack-starter.git"
