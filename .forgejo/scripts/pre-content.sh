@@ -2,7 +2,7 @@
 set -euo pipefail
 
 ROOT="$(git rev-parse --show-toplevel)"
-DEST="$ROOT/.build-content"
+DEST="$ROOT/.build/content"
 
 # Clean and prepare destination
 rm -rf "$DEST"
@@ -11,6 +11,7 @@ mkdir -p "$DEST"
 # Single optimized rsync command
 rsync -a \
   --exclude='/.build-content/' \
+  --exclude='/.build/' \
   --exclude='.DS_Store' \
   --exclude='/.forgejo/' \
   --exclude='/.git/' \
