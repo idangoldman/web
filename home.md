@@ -9,7 +9,7 @@ draft: false
 Specializing in development and maintenance, clean architecture, and technical team growth.
 
 [Let’s Talk!](https://cal.com/idangoldman/schedule-a-talk)
-[View Resume...](./Idan-Goldman-Polyglot-Technology-Leader-Resume.pdf)
+[View Resume...](./studio/Idan-Goldman-Polyglot-Technology-Leader-Resume.pdf)
 
 ## Been There, Built That
 

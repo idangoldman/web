@@ -17,16 +17,9 @@ rsync -a \
   --exclude="/${CONTENT_DIR#$ROOT_DIR/}/" \
   "$ROOT_DIR/" "$CONTENT_DIR/"
 
-# Flatten the home directory if it exists
-if [[ -d "$CONTENT_DIR/home" ]]; then
-  if [[ -f "$CONTENT_DIR/home/content.md" ]]; then
-    mv "$CONTENT_DIR/home/content.md" "$CONTENT_DIR/_index.md"
-  fi
-  shopt -s nullglob dotglob
-  for file in "$CONTENT_DIR/home"/*; do
-    mv "$file" "$CONTENT_DIR/"
-  done
-  rmdir "$CONTENT_DIR/home"
+# Rename home.md to _index.md if it exists
+if [[ -f "$CONTENT_DIR/home.md" ]]; then
+  mv "$CONTENT_DIR/home.md" "$CONTENT_DIR/_index.md"
 fi
 
 # Process content.md files efficiently without nested loops
