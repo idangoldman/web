@@ -47,6 +47,8 @@ processes:
         --buildDrafts \
         --buildExpired \
         --buildFuture \
+        --navigateToChanged \
+        --disableFastRender \
         --contentDir=.build/content \
         --source=.build \
         --watch
