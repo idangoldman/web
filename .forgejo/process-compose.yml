@@ -1,56 +1,57 @@
 version: "0.5"
+settings:
+  tui: false
 
 environment:
-  - "ROOT_DIR=${PWD}"
-  - "BUILD_DIR=${PWD}/.build"
-  - "CONTENT_DIR=${PWD}/.build/content"
+  - "ROOT_DIR=${ROOT_DIR:-${PWD}}"
+  - "BUILD_DIR=${ROOT_DIR}/.build"
+  - "CONTENT_DIR=${BUILD_DIR}/content"
+  - "HUGO_DIR=${ROOT_DIR}/.forgejo/hugo"
+  - "SCRIPTS_DIR=${ROOT_DIR}/.forgejo/scripts"
 
 processes:
-  # 1) One-shot: clone (or reuse) the Hugo theme starter.
   clone-theme:
-    command: ./.forgejo/scripts/clone-theme.sh ${FRESH:+--fresh}
+    working_dir: "${ROOT_DIR}"
+    command: $${SCRIPTS_DIR}/clone-theme.sh ${FRESH:+--fresh}
     availability:
       restart: "no"
 
-  # 2) Watch + overlay .forgejo/hugo/ on top of .build/.
   copy-overlay:
+    working_dir: "${ROOT_DIR}"
     command: |
       watchexec \
-        --watch .forgejo/hugo \
-        --on-busy-update queue \
         --debounce 200ms \
-        -- cp -r .forgejo/hugo/. .build/
+        --on-busy-update queue \
+        --watch $${HUGO_DIR} \
+        -- cp -r $${HUGO_DIR}/. $${BUILD_DIR}/
     depends_on:
       clone-theme:
         condition: process_completed_successfully
 
-  # 3) Watch content and stage into .build/content via pre-content.sh.
   copy-content:
+    working_dir: "${ROOT_DIR}"
     command: |
       watchexec \
-        --watch . \
+        --debounce 300ms \
         --ignore '.build/**' \
         --ignore '.forgejo/**' \
         --ignore '.git/**' \
-        --ignore 'node_modules/**' \
         --on-busy-update queue \
-        --debounce 300ms \
-        -- ./.forgejo/scripts/pre-content.sh
+        --watch . \
+        -- $${SCRIPTS_DIR}/pre-content.sh
     depends_on:
       clone-theme:
         condition: process_completed_successfully
 
-  # 4) Hugo dev server (its own --watch picks up changes inside .build/).
   hugo-serve:
+    working_dir: "${BUILD_DIR}"
     command: |
       hugo serve \
         --buildDrafts \
         --buildExpired \
         --buildFuture \
-        --navigateToChanged \
         --disableFastRender \
-        --contentDir=.build/content \
-        --source=.build \
+        --navigateToChanged \
         --watch
     depends_on:
       copy-overlay:
@@ -58,4 +59,6 @@ processes:
       copy-content:
         condition: process_started
     availability:
+      backoff_seconds: 2
+      max_restarts: 3
       restart: on_failure
