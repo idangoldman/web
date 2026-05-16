@@ -48,3 +48,6 @@ SortBy              = "default"
 [colorScheme]
     toggle  = false
     default = "light"
+
+[comments]
+    enabled  = false

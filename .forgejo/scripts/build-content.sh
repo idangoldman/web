@@ -29,7 +29,8 @@ while IFS= read -r -d '' file; do
   has_siblings=$(find "$dir" -maxdepth 1 -name '*.md' ! -name 'content.md' -print -quit)
   has_subdirs=$(find "$dir" -mindepth 1 -type d -print -quit)
 
-  if [[ -n "$has_siblings" || -n "$has_subdirs" ]]; then
+  # if [[ -n "$has_siblings" || -n "$has_subdirs" ]]; then
+  if [[ -n "$has_siblings" ]]; then
     mv "$file" "$dir/_index.md"
   else
     mv "$file" "$dir/index.md"
