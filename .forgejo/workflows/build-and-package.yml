@@ -33,7 +33,7 @@ jobs:
       - name: Install Hugo (extended)
         run: |
           curl -fsSL -o hugo.deb \
-            "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb"
+            "https://github.com/gohugoio/hugo/releases/download/v${{ env.HUGO_VERSION }}/hugo_extended_${{ env.HUGO_VERSION }}_linux-amd64.deb"
           sudo dpkg -i hugo.deb
           hugo version
 
@@ -46,37 +46,37 @@ jobs:
 
       - name: Clone theme
         if: steps.cache-theme.outputs.cache-hit != 'true'
-        run: ${SCRIPTS_DIR}/clone-theme.sh
+        run: ${{ env.SCRIPTS_DIR}}/clone-theme.sh
 
       - name: Copy theme customizations
-        run: cp -r ${HUGO_DIR}/. ${BUILD_DIR}/
+        run: cp -r ${{ env.HUGO_DIR }}/. ${{ env.BUILD_DIR }}/
 
       - name: Build content
-        run: ${SCRIPTS_DIR}/build-content.sh
+        run: ${{ env.SCRIPTS_DIR}}/build-content.sh
 
       - name: Build
         run: |
           hugo \
             --cleanDestinationDir \
-            --destination "${BUILD_DIR}/public" \
+            --destination "${{ env.BUILD_DIR }}/public" \
             --gc \
             --minify \
-            --source "${BUILD_DIR}"
+            --source "${{ env.BUILD_DIR }}"
 
       - name: Package
-        run: zip -r "${SITE_VERSION}-site.zip" "${BUILD_DIR}/public"
+        run: zip -r "${SITE_VERSION}-site.zip" "${{ env.BUILD_DIR }}/public"
 
       - name: Upload
         run: |
-          FILE_NAME="${SITE_VERSION}-site.zip"
+          FILE_NAME="${{ env.SITE_VERSION }}-site.zip"
           curl --fail \
             -H "Authorization: token ${{ secrets.ACTION_RUNNER_TOKEN }}" \
             --upload-file "$FILE_NAME" \
-            "https://git.goldman.id/api/packages/${{ github.repository_owner }}/generic/web/${SITE_VERSION}/$FILE_NAME"
+            "https://git.goldman.id/api/packages/${{ github.repository_owner }}/generic/web/${{ env.SITE_VERSION }}/$FILE_NAME"
 
       - name: Push Tag
         run: |
           git config user.name "forgejo-actions-bot"
           git config user.email "actions@noreply.forgejo"
-          git tag --force "${SITE_VERSION}"
-          git push origin "${SITE_VERSION}" --force
+          git tag --force "${{ env.SITE_VERSION }}"
+          git push origin "${{ env.SITE_VERSION }}" --force
