@@ -3,74 +3,80 @@ name: Build and Package
 on:
   workflow_dispatch:
 
-  # push:
-  #   branches:
-  #     - main
+  push:
+    branches:
+      - main
 
 env:
-  HUGO_THEME_STACK_VERSION: v4.0.2
-  BUILD_DIR: .build
+  BUILD_DIR: ${{ github.workspace }}/.build
+  CONTENT_DIR: ${{ github.workspace }}/.build/content
+  HUGO_DIR: ${{ github.workspace }}/.forgejo/hugo
+  HUGO_VERSION: "0.161.1"
+  ROOT_DIR: ${{ github.workspace }}
+  SCRIPTS_DIR: ${{ github.workspace }}/.forgejo/scripts
 
 jobs:
   build:
-    runs-on: ubuntu
+    runs-on: ubuntu-go
     steps:
       - name: Set Version
         run: |
           VERSION=$(date +%Y%m%d-%H%M%S)
           echo "SITE_VERSION=$VERSION" >> $FORGEJO_ENV
-          echo $VERSION
+          echo "$VERSION"
 
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
           token: ${{ secrets.ACTION_RUNNER_TOKEN }}
 
-      - name: Cache Setup
-        id: cache-setup
+      - name: Install Hugo (extended)
+        run: |
+          curl -fsSL -o hugo.deb \
+            "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb"
+          sudo dpkg -i hugo.deb
+          hugo version
+
+      - name: Cache theme
+        id: cache-theme
         uses: actions/cache@v4
         with:
-          key: cache-setup-${{ env.HUGO_THEME_STACK_VERSION }}
+          key: build-${{ env.HUGO_VERSION }}-${{ hashFiles('.forgejo/scripts/clone-theme.sh') }}
           path: ${{ env.BUILD_DIR }}
 
-      - name: Setup
-        if: steps.cache-setup.outputs.cache-hit != 'true'
-        run: |
-          git clone \
-            --branch ${{ env.HUGO_THEME_STACK_VERSION }} \
-            --depth=1 \
-            git@github.com:CaiJimmy/hugo-theme-stack-starter.git \
-            ${{ env.BUILD_DIR }}
+      - name: Clone theme
+        if: steps.cache-theme.outputs.cache-hit != 'true'
+        run: ${SCRIPTS_DIR}/clone-theme.sh
 
-          cd ${{ env.BUILD_DIR }}
-          npm ci
+      - name: Copy theme customizations
+        run: cp -r ${HUGO_DIR}/. ${BUILD_DIR}/
 
-      - name: Copy Custom Files
-        run: |
-          cp -rv .forgejo/quartz/* ${{ env.BUILD_DIR }}/
+      - name: Build content
+        run: ${SCRIPTS_DIR}/build-content.sh
 
       - name: Build
         run: |
-          cd ${{ env.BUILD_DIR }}
-          npx quartz build --directory ../ --output public
+          hugo \
+            --cleanDestinationDir \
+            --destination "${BUILD_DIR}/public" \
+            --gc \
+            --minify \
+            --source "${BUILD_DIR}"
 
       - name: Package
-        run: |
-          zip -r "${{ env.SITE_VERSION }}-site.zip" "${{ env.BUILD_DIR }}/public"
+        run: zip -r "${SITE_VERSION}-site.zip" "${BUILD_DIR}/public"
 
       - name: Upload
         run: |
-          FILE_NAME="${{ env.SITE_VERSION }}-site.zip"
-
+          FILE_NAME="${SITE_VERSION}-site.zip"
           curl --fail \
             -H "Authorization: token ${{ secrets.ACTION_RUNNER_TOKEN }}" \
             --upload-file "$FILE_NAME" \
-            "https://git.goldman.id/api/packages/${{ github.repository_owner }}/generic/web/${{ env.SITE_VERSION }}/$FILE_NAME"
+            "https://git.goldman.id/api/packages/${{ github.repository_owner }}/generic/web/${SITE_VERSION}/$FILE_NAME"
 
       - name: Push Tag
         run: |
           git config user.name "forgejo-actions-bot"
           git config user.email "actions@noreply.forgejo"
-
-          git tag --force ${{ env.SITE_VERSION }}
-          git push origin ${{ env.SITE_VERSION }} --force
+          git tag --force "${SITE_VERSION}"
+          git push origin "${SITE_VERSION}" --force
