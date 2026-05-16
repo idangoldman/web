@@ -8,12 +8,8 @@ on:
       - main
 
 env:
-  BUILD_DIR: ${{ github.workspace }}/.build
-  CONTENT_DIR: ${{ github.workspace }}/.build/content
   HUGO_DIR: ${{ github.workspace }}/.forgejo/hugo
   HUGO_VERSION: "0.161.1"
-  ROOT_DIR: ${{ github.workspace }}
-  SCRIPTS_DIR: ${{ github.workspace }}/.forgejo/scripts
 
 jobs:
   build:
@@ -24,6 +20,12 @@ jobs:
           VERSION=$(date +%Y%m%d-%H%M%S)
           echo "SITE_VERSION=$VERSION" >> $FORGEJO_ENV
           echo "$VERSION"
+
+      - name: Resolve paths
+        run: |
+          echo "ROOT_DIR=$PWD"               >> "$FORGEJO_ENV"
+          echo "BUILD_DIR=$PWD/.build"       >> "$FORGEJO_ENV"
+          echo "SCRIPTS_DIR=$PWD/.forgejo/scripts" >> "$FORGEJO_ENV"
 
       - uses: actions/checkout@v4
         with:
