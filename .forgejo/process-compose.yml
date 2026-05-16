@@ -1,23 +1,19 @@
 version: "0.5"
-settings:
-  tui: false
 
 environment:
   - "ROOT_DIR=${ROOT_DIR:-${PWD}}"
   - "BUILD_DIR=${ROOT_DIR}/.build"
-  - "CONTENT_DIR=${BUILD_DIR}/content"
+  - "CONTENT_DIR=${ROOT_DIR}/.build/content"
   - "HUGO_DIR=${ROOT_DIR}/.forgejo/hugo"
   - "SCRIPTS_DIR=${ROOT_DIR}/.forgejo/scripts"
 
 processes:
   clone-theme:
-    working_dir: "${ROOT_DIR}"
     command: $${SCRIPTS_DIR}/clone-theme.sh ${FRESH:+--fresh}
     availability:
       restart: "no"
 
   copy-overlay:
-    working_dir: "${ROOT_DIR}"
     command: |
       watchexec \
         --debounce 200ms \
@@ -29,7 +25,6 @@ processes:
         condition: process_completed_successfully
 
   copy-content:
-    working_dir: "${ROOT_DIR}"
     command: |
       watchexec \
         --debounce 300ms \
@@ -44,7 +39,6 @@ processes:
         condition: process_completed_successfully
 
   hugo-serve:
-    working_dir: "${BUILD_DIR}"
     command: |
       hugo serve \
         --buildDrafts \
@@ -52,6 +46,7 @@ processes:
         --buildFuture \
         --disableFastRender \
         --navigateToChanged \
+        --source $${BUILD_DIR} \
         --watch
     depends_on:
       copy-overlay:
