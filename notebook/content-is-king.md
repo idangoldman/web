@@ -147,5 +147,3 @@ The flowchart above can be summarized by the following steps:
 ## The End
 
 …and that is it folks, thank you for reading! See you next time.
-
-[https://g.co/gemini/share/83f37ed550d1](https://g.co/gemini/share/83f37ed550d1)
