@@ -1,0 +1,1254 @@
+# Schema per item:
+#  aka       (optional)  aliases + original dirty label from the old table
+#  category  (required)  list, always — single-category items use a 1-element list
+#  name      (required)  canonical clean name; unique join key for lists
+#  note      (optional)  rare, my voice / era / disambiguation
+#  status    (required)  active | periodic | archived
+#                          active   = current daily/go-to
+#                          archived = "too old for this tech" pile
+#                          periodic = on-demand, client maintenance, situational
+#  url       (optional)  homepage or docs (single field)
+
+- name: HTML
+  category: [Markup Languages]
+  status: active
+
+- name: CSS
+  category: [Markup Languages]
+  status: active
+
+- name: SASS
+  category: [Markup Languages]
+  status: active
+
+- name: Less
+  category: [Markup Languages]
+  status: archived
+
+- name: Stylus
+  category: [Markup Languages]
+  status: archived
+
+- name: SVG
+  category: [Markup Languages]
+  status: periodic
+
+- name: Markdown
+  category: [Markup Languages]
+  status: active
+
+- name: JavaScript
+  category: [Languages]
+  status: active
+
+- name: TypeScript
+  category: [Languages]
+  status: active
+
+- name: CoffeeScript
+  category: [Languages]
+  status: active
+  note: When I have free time to enjoy writing JavaScript.
+
+- name: Ruby
+  category: [Languages]
+  status: active
+  note: Current programming love language.
+
+- name: Python
+  category: [Languages]
+  status: active
+
+- name: PHP
+  category: [Languages]
+  status: periodic
+  note: The ex which still pays maintenance bills.
+
+- name: SQL
+  category: [Languages]
+  status: periodic
+
+- name: PL/SQL
+  category: [Languages]
+  status: archived
+
+- name: Bash
+  category: [Languages, Shells]
+  status: active
+
+- name: Fish
+  category: [Languages, Shells]
+  status: active
+  note: Easier to understand even after getting bashed with it.
+
+- name: zsh
+  category: [Shells]
+  status: archived
+
+- name: Gherkin
+  category: [Languages]
+  status: active
+  note: For writing testable feature user stories once.
+
+- name: AppScript
+  category: [Languages]
+  status: archived
+  aka: [Google Apps Script]
+
+- name: Node
+  category: [Runtimes]
+  status: active
+  aka: [Node.js]
+  note: Go-to full-stack web development environment. (Missing from the old GitHub table — added on migration.)
+
+- name: React
+  category: [Frameworks]
+  status: active
+  note: Go-to for client work.
+
+- name: Vue
+  category: [Frameworks]
+  status: periodic
+  aka: [Vue.js]
+  note: When clients love their work and not only following trends.
+
+- name: Angular
+  category: [Frameworks]
+  status: periodic
+  note: When forced to maintain a client's old codebase.
+
+- name: Ruby on Rails
+  category: [Frameworks]
+  status: active
+  aka: [Rails]
+  note: Default for fresh client work.
+
+- name: Express
+  category: [Frameworks]
+  status: periodic
+
+- name: Fastify
+  category: [Frameworks]
+  status: periodic
+
+- name: FastAPI
+  category: [Frameworks]
+  status: periodic
+
+- name: Flask
+  category: [Frameworks]
+  status: periodic
+
+- name: Laravel
+  category: [Frameworks]
+  status: periodic
+  note: When PHP makes sense or it's a project prerequisite.
+
+- name: CodeIgniter
+  category: [Frameworks]
+  status: archived
+
+- name: Symfony
+  category: [Frameworks]
+  status: archived
+  aka: [Symphony 2]
+  note: v2.
+
+- name: Next
+  category: [Frameworks]
+  status: periodic
+  aka: [Next.js]
+
+- name: Nuxt
+  category: [Frameworks]
+  status: periodic
+  aka: [Nuxt.js]
+
+- name: Hotwire
+  category: [Frameworks]
+  status: periodic
+
+- name: Stimulus
+  category: [Frameworks]
+  status: periodic
+
+- name: Backbone
+  category: [Frameworks]
+  status: archived
+
+- name: Bootstrap
+  category: [Frameworks]
+  status: archived
+
+- name: Tailwind
+  category: [Frameworks]
+  status: periodic
+
+- name: Material Design
+  category: [Frameworks]
+  status: archived
+
+- name: Flight
+  category: [Frameworks]
+  status: archived
+  aka: [Flight.js]
+  note: Dead Twitter event-base framework.
+
+- name: Slim
+  category: [Template Engines]
+  status: active
+
+- name: ERB
+  category: [Template Engines]
+  status: periodic
+
+- name: Haml
+  category: [Template Engines]
+  status: archived
+
+- name: Jinja
+  category: [Template Engines]
+  status: periodic
+
+- name: Nunjucks
+  category: [Template Engines]
+  status: archived
+
+- name: Liquid
+  category: [Template Engines]
+  status: periodic
+
+- name: Blade
+  category: [Template Engines]
+  status: periodic
+
+- name: Twig
+  category: [Template Engines]
+  status: archived
+
+- name: Smarty
+  category: [Template Engines]
+  status: archived
+
+- name: Swig
+  category: [Template Engines]
+  status: archived
+
+- name: Timber
+  category: [Template Engines]
+  status: archived
+
+- name: Mustache
+  category: [Template Engines]
+  status: archived
+
+- name: Handlebars
+  category: [Template Engines]
+  status: archived
+
+- name: Pug
+  category: [Template Engines]
+  status: archived
+
+- name: MJML
+  category: [Template Engines]
+  status: periodic
+
+- name: Underscore
+  category: [Javascript Libraries, Template Engines]
+  status: archived
+
+- name: jQuery
+  category: [Javascript Libraries]
+  status: periodic
+
+- name: lodash
+  category: [Javascript Libraries]
+  status: periodic
+
+- name: date-fns
+  category: [Javascript Libraries]
+  status: periodic
+  aka: [date-fn]
+
+- name: Google Fonts
+  category: [Javascript Libraries]
+  status: periodic
+
+- name: RTLCSS
+  category: [Javascript Libraries]
+  status: periodic
+
+- name: SassDoc
+  category: [Javascript Libraries]
+  status: periodic
+
+- name: esbuild
+  category: [Bundlers]
+  status: active
+
+- name: Vite
+  category: [Bundlers]
+  status: periodic
+
+- name: webpack
+  category: [Bundlers]
+  status: periodic
+
+- name: Parcel
+  category: [Bundlers]
+  status: archived
+
+- name: PostCSS
+  category: [Bundlers]
+  status: periodic
+
+- name: RequireJS
+  category: [Bundlers]
+  status: archived
+
+- name: Rake
+  category: [Task Runners and Deployers]
+  status: active
+
+- name: Makefile
+  category: [Task Runners and Deployers]
+  status: periodic
+
+- name: Taskfile
+  category: [Task Runners and Deployers]
+  status: periodic
+
+- name: Gulp
+  category: [Task Runners and Deployers]
+  status: archived
+
+- name: Grunt
+  category: [Task Runners and Deployers]
+  status: archived
+
+- name: Ant
+  category: [Task Runners and Deployers]
+  status: archived
+
+- name: Fabric
+  category: [Task Runners and Deployers]
+  status: archived
+
+- name: Capistrano
+  category: [Task Runners and Deployers]
+  status: archived
+
+- name: Deployer
+  category: [Task Runners and Deployers]
+  status: archived
+
+- name: WordMove
+  category: [Task Runners and Deployers]
+  status: archived
+
+- name: Cucumber
+  category: [Testing]
+  status: active
+
+- name: Jest
+  category: [Testing]
+  status: periodic
+
+- name: Vitest
+  category: [Testing]
+  status: periodic
+
+- name: Jasmine
+  category: [Testing]
+  status: archived
+
+- name: Minitest
+  category: [Testing]
+  status: periodic
+
+- name: RSpec
+  category: [Testing]
+  status: periodic
+
+- name: Capybara
+  category: [Testing]
+  status: periodic
+
+- name: PHPUnit
+  category: [Testing]
+  status: archived
+
+- name: node:test
+  category: [Testing]
+  status: periodic
+
+- name: SASS True
+  category: [Testing]
+  status: periodic
+  aka: [True]
+
+- name: Cypress
+  category: [Testing]
+  status: periodic
+
+- name: Playwright
+  category: [Testing]
+  status: active
+
+- name: Puppeteer
+  category: [Testing]
+  status: periodic
+
+- name: Selenium
+  category: [Testing]
+  status: archived
+
+- name: Postman
+  category: [Testing]
+  status: periodic
+
+- name: Bruno
+  category: [Testing]
+  status: active
+
+- name: Chrome DevTools
+  category: [Testing]
+  status: active
+
+- name: Firebug
+  category: [Testing]
+  status: archived
+
+- name: Xdebug
+  category: [Testing]
+  status: periodic
+
+- name: ESLint
+  category: [Linters and Formatters]
+  status: active
+
+- name: Prettier
+  category: [Linters and Formatters]
+  status: active
+
+- name: Stylelint
+  category: [Linters and Formatters]
+  status: active
+
+- name: RuboCop
+  category: [Linters and Formatters]
+  status: active
+
+- name: Black
+  category: [Linters and Formatters]
+  status: periodic
+
+- name: EditorConfig
+  category: [Linters and Formatters]
+  status: active
+
+- name: PHP_CodeSniffer
+  category: [Linters and Formatters]
+  status: archived
+
+- name: PHPCBF
+  category: [Linters and Formatters]
+  status: archived
+
+- name: Postgres
+  category: [Databases]
+  status: active
+  aka: [PostgreSQL]
+
+- name: SQLite
+  category: [Databases]
+  status: active
+
+- name: Redis
+  category: [Databases]
+  status: active
+
+- name: MySQL
+  category: [Databases]
+  status: periodic
+  note: Mostly for WordPress clients.
+
+- name: MariaDB
+  category: [Databases]
+  status: periodic
+
+- name: Percona
+  category: [Databases]
+  status: archived
+
+- name: CouchDB
+  category: [Databases]
+  status: archived
+
+- name: Google Sheets
+  category: [Databases]
+  status: periodic
+  aka: [Google Spreadsheet]
+
+- name: TablePlus
+  category: [Database Clients]
+  status: active
+
+- name: pgAdmin
+  category: [Database Clients]
+  status: periodic
+
+- name: Adminer
+  category: [Database Clients]
+  status: periodic
+
+- name: phpMyAdmin
+  category: [Database Clients]
+  status: archived
+
+- name: Sequel Pro
+  category: [Database Clients]
+  status: archived
+
+- name: asdf
+  category: [Language Managers]
+  status: active
+
+- name: rbenv
+  category: [Language Managers]
+  status: periodic
+
+- name: rvm
+  category: [Language Managers]
+  status: archived
+
+- name: nvm
+  category: [Language Managers]
+  status: periodic
+
+- name: fnm
+  category: [Language Managers]
+  status: periodic
+
+- name: pyenv
+  category: [Language Managers]
+  status: periodic
+
+- name: nix
+  category: [Package Managers]
+  status: active
+
+- name: Homebrew
+  category: [Package Managers]
+  status: active
+  aka: [Brew, brew]
+
+- name: npm
+  category: [Package Managers]
+  status: active
+
+- name: pnpm
+  category: [Package Managers]
+  status: periodic
+
+- name: yarn
+  category: [Package Managers]
+  status: periodic
+
+- name: Bundler
+  category: [Package Managers]
+  status: active
+
+- name: gem
+  category: [Package Managers]
+  status: active
+
+- name: Composer
+  category: [Package Managers]
+  status: periodic
+
+- name: pip
+  category: [Package Managers]
+  status: active
+
+- name: pipenv
+  category: [Package Managers]
+  status: periodic
+
+- name: virtualenv
+  category: [Package Managers]
+  status: periodic
+
+- name: apt
+  category: [Package Managers]
+  status: periodic
+
+- name: dpkg
+  category: [Package Managers]
+  status: archived
+
+- name: rpm
+  category: [Package Managers]
+  status: archived
+
+- name: opkg
+  category: [Package Managers]
+  status: archived
+
+- name: mas
+  category: [Package Managers]
+  status: periodic
+
+- name: Git
+  category: [Version Control]
+  status: active
+  aka: [git]
+
+- name: Lazygit
+  category: [Version Control]
+  status: active
+
+- name: SVN
+  category: [Version Control]
+  status: archived
+  aka: [svn]
+
+- name: Mercurial
+  category: [Version Control]
+  status: archived
+  aka: [mercury]
+
+- name: Docker
+  category: [Server Virtualization]
+  status: active
+
+- name: Docker Compose
+  category: [Server Virtualization]
+  status: active
+
+- name: LazyDocker
+  category: [Server Virtualization]
+  status: active
+
+- name: Synology DSM
+  category: [Server Virtualization]
+  status: active
+
+- name: Proxmox
+  category: [Server Virtualization]
+  status: periodic
+
+- name: unRAID
+  category: [Server Virtualization]
+  status: periodic
+
+- name: Vagrant
+  category: [Server Virtualization]
+  status: archived
+
+- name: VirtualBox
+  category: [Server Virtualization]
+  status: archived
+
+- name: Parallels
+  category: [Server Virtualization]
+  status: periodic
+
+- name: Process Compose
+  category: [Process Managers]
+  status: active
+  note: Current 2-in-1 task runner and process manager.
+
+- name: systemd
+  category: [Process Managers]
+  status: periodic
+  aka: [Systemd]
+
+- name: launchd
+  category: [Process Managers]
+  status: periodic
+
+- name: Supervisord
+  category: [Process Managers]
+  status: archived
+
+- name: Linode
+  category: [Hosting]
+  status: active
+  note: Preferred cloud altar.
+
+- name: AWS EC2
+  category: [Hosting]
+  status: periodic
+
+- name: AWS S3
+  category: [Hosting]
+  status: periodic
+
+- name: Google Cloud Run
+  category: [Hosting]
+  status: periodic
+  aka: [Google CloudRun]
+
+- name: Heroku
+  category: [Hosting]
+  status: archived
+
+- name: WordPress
+  category: [Platforms]
+  status: periodic
+  note: Runs the internet, therefore pays the bill.
+
+- name: Jekyll
+  category: [Platforms]
+  status: periodic
+
+- name: Eleventy
+  category: [Platforms]
+  status: periodic
+
+- name: Middleman
+  category: [Platforms]
+  status: archived
+
+- name: Ghost
+  category: [Platforms]
+  status: archived
+
+- name: Shopify
+  category: [Platforms]
+  status: periodic
+
+- name: Drupal
+  category: [Platforms]
+  status: archived
+
+- name: Joomla
+  category: [Platforms]
+  status: archived
+
+- name: Make
+  category: [Automation]
+  status: periodic
+
+- name: Zapier
+  category: [Automation]
+  status: archived
+
+- name: YAML
+  category: [Structured Text Formats]
+  status: active
+
+- name: TOML
+  category: [Structured Text Formats]
+  status: active
+
+- name: JSON
+  category: [Structured Text Formats]
+  status: active
+
+- name: JSON Schema
+  category: [Structured Text Formats]
+  status: periodic
+
+- name: OpenAPI
+  category: [Structured Text Formats]
+  status: periodic
+
+- name: INI
+  category: [Structured Text Formats]
+  status: periodic
+
+- name: XML
+  category: [Structured Text Formats]
+  status: periodic
+
+- name: CSV
+  category: [Structured Text Formats]
+  status: active
+
+- name: CalDAV
+  category: [Structured Text Formats]
+  status: archived
+  aka: [CalDav]
+
+- name: CardDAV
+  category: [Structured Text Formats]
+  status: archived
+  aka: [CardDav]
+
+- name: ICS
+  category: [Structured Text Formats]
+  status: archived
+
+- name: VCard
+  category: [Structured Text Formats]
+  status: archived
+
+- name: VSCode
+  category: [Code Editors]
+  status: active
+  note: With many extensions.
+
+- name: Vim
+  category: [Code Editors]
+  status: periodic
+
+- name: Nano
+  category: [Code Editors]
+  status: periodic
+
+- name: Sublime Text
+  category: [Code Editors]
+  status: archived
+
+- name: PhpStorm
+  category: [Code Editors]
+  status: archived
+
+- name: WebStorm
+  category: [Code Editors]
+  status: archived
+
+- name: Atom
+  category: [Code Editors]
+  status: archived
+
+- name: Brackets
+  category: [Code Editors]
+  status: archived
+
+- name: TextMate
+  category: [Code Editors]
+  status: archived
+
+- name: Notepad++
+  category: [Code Editors]
+  status: archived
+
+- name: Aptana
+  category: [Code Editors]
+  status: archived
+
+- name: NetBeans
+  category: [Code Editors]
+  status: archived
+
+- name: Eclipse
+  category: [Code Editors]
+  status: archived
+
+- name: Adobe Dreamweaver
+  category: [Code Editors]
+  status: archived
+
+- name: CoffeeCup HTML Editor
+  category: [Code Editors]
+  status: archived
+
+- name: iTerm
+  category: [Terminal Emulators]
+  status: active
+  aka: [iTerm2]
+
+- name: Kitty
+  category: [Terminal Emulators]
+  status: periodic
+
+- name: Console
+  category: [Terminal Emulators]
+  status: archived
+
+- name: Obsidian
+  category: [Text Editors]
+  status: active
+
+- name: iA Writer
+  category: [Text Editors]
+  status: periodic
+
+- name: Apple Notes
+  category: [Text Editors]
+  status: active
+
+- name: GoodNotes
+  category: [Text Editors]
+  status: periodic
+
+- name: Simplenote
+  category: [Text Editors]
+  status: archived
+
+- name: Notepad
+  category: [Text Editors]
+  status: archived
+
+- name: Figma
+  category: [Graphic Design]
+  status: active
+
+- name: Sketch
+  category: [Graphic Design]
+  status: archived
+
+- name: Photoshop
+  category: [Graphic Design]
+  status: periodic
+
+- name: Illustrator
+  category: [Graphic Design]
+  status: periodic
+
+- name: InDesign
+  category: [Graphic Design]
+  status: archived
+
+- name: GIMP
+  category: [Graphic Design]
+  status: periodic
+
+- name: Pixelmator
+  category: [Graphic Design]
+  status: periodic
+
+- name: curl
+  category: [CLI Tools]
+  status: active
+
+- name: grep
+  category: [CLI Tools]
+  status: active
+
+- name: sed
+  category: [CLI Tools]
+  status: active
+
+- name: awk
+  category: [CLI Tools]
+  status: active
+
+- name: find
+  category: [CLI Tools]
+  status: active
+
+- name: xargs
+  category: [CLI Tools]
+  status: active
+
+- name: rsync
+  category: [CLI Tools]
+  status: active
+
+- name: ssh
+  category: [CLI Tools]
+  status: active
+
+- name: scp
+  category: [CLI Tools]
+  status: periodic
+
+- name: wget
+  category: [CLI Tools]
+  status: periodic
+
+- name: dig
+  category: [CLI Tools]
+  status: periodic
+
+- name: nslookup
+  category: [CLI Tools]
+  status: periodic
+
+- name: whois
+  category: [CLI Tools]
+  status: periodic
+
+- name: ping
+  category: [CLI Tools]
+  status: active
+
+- name: traceroute
+  category: [CLI Tools]
+  status: periodic
+
+- name: ip
+  category: [CLI Tools]
+  status: periodic
+
+- name: nmap
+  category: [CLI Tools]
+  status: periodic
+
+- name: socat
+  category: [CLI Tools]
+  status: archived
+
+- name: htop
+  category: [CLI Tools]
+  status: active
+
+- name: rename
+  category: [CLI Tools]
+  status: periodic
+
+- name: dotbot
+  category: [CLI Tools]
+  status: periodic
+
+- name: wp-cli
+  category: [CLI Tools]
+  status: periodic
+
+- name: NixOS
+  category: [Operation Systems]
+  status: active
+  note: My linux church and I'm its missionary.
+
+- name: macOS
+  category: [Operation Systems]
+  status: active
+  aka: [macOS since Leopard]
+  note: Since Leopard.
+
+- name: Ubuntu
+  category: [Operation Systems]
+  status: active
+  aka: [Ubuntu desktop && server]
+  note: Desktop & server.
+
+- name: Debian
+  category: [Operation Systems]
+  status: periodic
+
+- name: Fedora
+  category: [Operation Systems]
+  status: periodic
+
+- name: CentOS
+  category: [Operation Systems]
+  status: archived
+
+- name: Android
+  category: [Operation Systems]
+  status: periodic
+
+- name: iOS
+  category: [Operation Systems]
+  status: periodic
+
+- name: iPadOS
+  category: [Operation Systems]
+  status: periodic
+
+- name: Windows
+  category: [Operation Systems]
+  status: archived
+  aka: [Windows 98 to XP]
+  note: 98 to XP.
+
+- name: OpenWrt
+  category: [Routers]
+  status: active
+  aka: [OpenWRT]
+
+- name: pfSense
+  category: [Routers]
+  status: periodic
+
+- name: RouterOS
+  category: [Routers]
+  status: periodic
+
+- name: GNOME
+  category: [Window and Tile Managers]
+  status: active
+  aka: [Gnome]
+
+- name: Yabai
+  category: [Window and Tile Managers]
+  status: periodic
+
+- name: Magnet
+  category: [Window and Tile Managers]
+  status: periodic
+
+- name: Moom
+  category: [Window and Tile Managers]
+  status: archived
+
+- name: Unity
+  category: [Window and Tile Managers]
+  status: archived
+
+- name: Chrome
+  category: [Browsers]
+  status: active
+
+- name: Chromium
+  category: [Browsers]
+  status: active
+
+- name: Safari
+  category: [Browsers]
+  status: periodic
+
+- name: Firefox
+  category: [Browsers]
+  status: periodic
+  aka: [Mozilla, Netscape-Mozilla-Firefox]
+
+- name: Netscape
+  category: [Browsers]
+  status: archived
+
+- name: Opera
+  category: [Browsers]
+  status: archived
+
+- name: Internet Explorer
+  category: [Browsers]
+  status: archived
+  aka: [IE6-8]
+  note: 6 to 8 — the sprite-gluing, Photoshop-fighting era.
+
+- name: Epiphany
+  category: [Browsers]
+  status: archived
+  aka: [Web, GNOME Web]
+
+- name: Thor
+  category: [Browsers]
+  status: archived
+
+- name: Slack
+  category: [Communication]
+  status: active
+
+- name: Google Meet
+  category: [Communication]
+  status: active
+
+- name: Zoom
+  category: [Communication]
+  status: periodic
+
+- name: Gmail
+  category: [Communication]
+  status: active
+
+- name: Hey
+  category: [Communication]
+  status: periodic
+
+- name: Telegram
+  category: [Communication]
+  status: periodic
+
+- name: WhatsApp
+  category: [Communication]
+  status: active
+
+- name: Discord
+  category: [Communication]
+  status: periodic
+
+- name: Skype
+  category: [Communication]
+  status: archived
+
+- name: Notion
+  category: [Project and Task Managers]
+  status: periodic
+
+- name: Todoist
+  category: [Project and Task Managers]
+  status: periodic
+
+- name: TickTick
+  category: [Project and Task Managers]
+  status: periodic
+
+- name: Trello
+  category: [Project and Task Managers]
+  status: archived
+
+- name: Jira
+  category: [Project and Task Managers]
+  status: periodic
+  aka: [JIRA]
+
+- name: Asana
+  category: [Project and Task Managers]
+  status: periodic
+
+- name: ClickUp
+  category: [Project and Task Managers]
+  status: periodic
+
+- name: Monday
+  category: [Project and Task Managers]
+  status: periodic
+
+- name: Basecamp
+  category: [Project and Task Managers]
+  status: archived
+
+- name: Microsoft To Do
+  category: [Project and Task Managers]
+  status: archived
+  aka: [Microsoft Todo]
+
+- name: Toggl
+  category: [Time Trackers]
+  status: periodic
+
+- name: Everhour
+  category: [Time Trackers]
+  status: archived
+
+- name: Raycast
+  category: [Officeware]
+  status: active
+
+- name: Alfred
+  category: [Officeware]
+  status: archived
+
+- name: Google Workspace
+  category: [Officeware]
+  status: active
+  aka: [Google Workplace]
+
+- name: Claude
+  category: [AI Assistants]
+  status: active
+  note: Lets me be a human code editor rather than writer.
+
+- name: GitHub Copilot
+  category: [AI Assistants]
+  status: active
+
+- name: ChatGPT
+  category: [AI Assistants]
+  status: archived
+
+- name: MacBook Pro
+  category: [Hardware]
+  status: active
+  note: Main tool driving creation and innovation.
+
+- name: Dell Monitor
+  category: [Hardware]
+  status: active
+  note: Two on arms — one for code, one for the browser.
+
+- name: Nuphy Air75 v2
+  category: [Hardware]
+  status: active
+  note: Brown switches, easy on fingers and ears.
+
+- name: Logitech MX Vertical
+  category: [Hardware]
+  status: active
+  note: Pain-free wrist navigation.

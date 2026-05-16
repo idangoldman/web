@@ -1,0 +1,121 @@
+# Schema per item:
+#   name      (required)  canonical clean name; unique join key for lists
+#   note      (optional)  freeform text, for my future self and anyone else who finds this — add context, links, whatever.
+#   project   (optional)  name of project from projects.yml, if applicable — join for cross-referencing.
+#   status    (optional)  current | retired | planned — heuristic, for sorting and filtering
+#   toolbox   (required)  list of tools used in this stack — join by name to toolbox.yml, for easy lookup and cross-referencing.
+
+- name: Current Daily Driver
+  status: current
+  note: What I reach for on fresh work — stable tech that won't cause midnight debugging.
+  toolbox:
+    - macOS
+    - NixOS
+    - nix
+    - Fish
+    - Git
+    - Lazygit
+    - Node
+    - Ruby
+    - Python
+    - Postgres
+    - SQLite
+    - YAML
+    - SASS
+    - Slim
+    - CoffeeScript
+    - Docker
+    - Process Compose
+    - iTerm
+    - VSCode
+
+- name: This Website
+  status: current
+  note: Hugo + hugo-theme-stack, built and deployed via Forgejo Actions to Cloudflare Pages.
+  toolbox:
+    - Markdown
+    - YAML
+    - TOML
+    - SASS
+    - Docker
+    - Git
+
+- name: StaticPage
+  project: StaticPage
+  note: The SaaS coming-soon builder — full lifecycle, design to infra.
+  toolbox:
+    - Python
+    - JavaScript
+    - SASS
+    - Markdown
+    - Flask
+    - Fabric
+    - Flight
+    - Jinja
+    - Nunjucks
+    - Gulp
+    - Postgres
+    - Heroku
+    - AWS S3
+
+- name: kit
+  project: kit
+  note: Tested and documented SASS UI kit — yes, you can test CSS.
+  toolbox:
+    - SASS
+    - Jest
+    - SASS True
+    - SassDoc
+
+- name: WP-DDE
+  project: WP-DDE
+  note: Local WordPress dev environment, also powers small sites.
+  toolbox:
+    - Docker Compose
+    - PHP
+    - MariaDB
+    - Redis
+    - wp-cli
+
+- name: PLATE & fmwk
+  project: PLATE & fmwk
+  note: JavaScript on a PLATE — Rails-flavored prototype enrichments.
+  toolbox:
+    - JavaScript
+    - CoffeeScript
+    - Gherkin
+    - YAML
+    - Fish
+    - ESLint
+    - esbuild
+    - Cucumber
+
+- name: Stooge
+  project: Stooge
+  note: Config format converter, born from YAML-over-JSON sanity.
+  toolbox:
+    - JavaScript
+    - CoffeeScript
+    - Gherkin
+    - Cucumber
+    - JSON
+    - YAML
+    - TOML
+    - INI
+
+- name: cmdfile
+  project: cmdfile
+  note: TOML-driven CLI task runner, current iteration in Zig.
+  toolbox:
+    - TOML
+    - Fish
+
+- name: ToDoin
+  project: ToDoin
+  status: retired
+  note: Private-to-dos Chrome extension — everyone builds one eventually.
+  toolbox:
+    - JavaScript
+    - SASS
+    - Backbone
+    - Gulp
