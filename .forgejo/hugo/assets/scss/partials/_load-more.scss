@@ -1,0 +1,23 @@
+.pagination.load-more {
+  .page-link {
+    flex-basis: 100%;
+
+    &[aria-busy="true"] span {
+      position: relative;
+
+      &:after {
+        animation: ellipsis steps(4, end) 1200ms infinite;
+        content: "\2026";
+        overflow: hidden;
+        position: absolute;
+        width: 0;
+      }
+    }
+  }
+}
+
+@keyframes ellipsis {
+  to {
+    width: 12px;
+  }
+}

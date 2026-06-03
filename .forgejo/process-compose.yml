@@ -1,0 +1,74 @@
+version: "0.5"
+
+environment:
+  - "ROOT_DIR=${ROOT_DIR:-${PWD}}"
+  - "BUILD_DIR=${ROOT_DIR}/.build"
+  - "CONTENT_DIR=${ROOT_DIR}/.build/content"
+  - "HUGO_DIR=${ROOT_DIR}/.forgejo/hugo"
+  - "SCRIPTS_DIR=${ROOT_DIR}/.forgejo/scripts"
+  - "SITE_ENV=development"
+
+processes:
+  clone-theme:
+    command: >
+      $${SCRIPTS_DIR}/clone-theme.sh ${FRESH:+--fresh}
+    availability:
+      restart: "no"
+
+  prepare-build:
+    command: >
+      cp -r $${HUGO_DIR}/. $${BUILD_DIR}/
+      &&
+      $${SCRIPTS_DIR}/build-content.sh
+    depends_on:
+      clone-theme:
+        condition: process_completed_successfully
+    availability:
+      restart: "no"
+
+  hugo-serve:
+    command: >
+      hugo serve
+      --bind 0.0.0.0
+      --buildDrafts
+      --buildExpired
+      --buildFuture
+      --disableFastRender
+      --navigateToChanged
+      --noHTTPCache
+      --source $${BUILD_DIR}
+      --watch
+    depends_on:
+      prepare-build:
+        condition: process_completed_successfully
+    availability:
+      backoff_seconds: 2
+      max_restarts: 3
+      restart: on_failure
+
+  watch-customizations:
+    command: >
+      watchexec
+      --postpone
+      --debounce 200ms
+      --on-busy-update queue
+      --watch $${HUGO_DIR}/.
+      -- cp -r $${HUGO_DIR}/. $${BUILD_DIR}/
+    depends_on:
+      hugo-serve:
+        condition: process_started
+
+  watch-content:
+    command: >
+      watchexec
+      --postpone
+      --debounce 300ms
+      --ignore '.build/**'
+      --ignore '.forgejo/**'
+      --ignore '.git/**'
+      --on-busy-update queue
+      --watch .
+      -- $${SCRIPTS_DIR}/build-content.sh
+    depends_on:
+      hugo-serve:
+        condition: process_started

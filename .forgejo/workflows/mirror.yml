@@ -1,0 +1,64 @@
+name: Mirror
+
+on:
+  workflow_dispatch:
+
+  push:
+    branches:
+      - main
+
+jobs:
+  mirror:
+    runs-on: ubuntu
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.FJ_ACTION_RUNNER_TOKEN }}
+
+      - name: Cache APT packages list
+        id: cache-apt
+        uses: actions/cache@v4
+        with:
+          path: /var/lib/apt/lists
+          key: ${{ runner.os }}-apt-lists
+
+      - name: Update APT packages list
+        if: steps.cache-apt.outputs.cache-hit != 'true'
+        run: apt-get update
+
+      - name: Install dependencies
+        run: apt-get install -y rsync
+
+      - name: Build filtered snapshot and push
+        run: |
+          WORK_DIR="$PWD"
+          GIT_MIRROR_URL="https://x-access-token:${{ secrets.GH_MIRROR_TOKEN }}@github.com/idangoldman/web.git"
+          GIT_MIRROR_DIR="$(mktemp -d)"
+
+          if ! git clone --branch main --single-branch --depth 1 "$GIT_MIRROR_URL" "$GIT_MIRROR_DIR"; then
+            git init -q -b main "$GIT_MIRROR_DIR"
+            git -C "$GIT_MIRROR_DIR" remote add origin "$GIT_MIRROR_URL"
+          fi
+
+          rsync -a --delete \
+            --exclude='/.git/' \
+            --exclude='/.build/' \
+            --exclude='/collaborate/testimonials/' \
+            --exclude='/notebook/drafts/' \
+            "$WORK_DIR/" "$GIT_MIRROR_DIR/"
+
+          cd "$GIT_MIRROR_DIR"
+          git config user.name  "forgejo-actions-bot"
+          git config user.email "actions@noreply.forgejo"
+          git add -A
+
+          if git diff --cached --quiet; then
+            echo "No changes to mirror."
+            exit 0
+          fi
+
+          git commit -q \
+            -m "Mirror of ${FORGEJO_SHA:0:7}" \
+            -m "$(git -C "$WORK_DIR" log -1 --pretty=%B)"
+
+          git push origin main

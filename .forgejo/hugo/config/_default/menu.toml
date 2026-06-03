@@ -1,0 +1,60 @@
+[[main]]
+  identifier = "about"
+  name       = "About"
+  url        = "/about/"
+  weight     = 1
+  [main.params]
+    icon = "user"
+
+[[main]]
+  identifier = "studio"
+  name       = "Studio"
+  url        = "/studio/"
+  weight     = 2
+  [main.params]
+    icon = "code"
+
+[[main]]
+  identifier = "notebook"
+  name       = "Notebook"
+  url        = "/notebook/"
+  weight     = 3
+  [main.params]
+    icon = "notebook"
+
+[[main]]
+  identifier = "collaborate"
+  name       = "Collaborate"
+  url        = "/collaborate/"
+  weight     = 4
+  [main.params]
+    icon = "message"
+
+[[social]]
+  identifier = "github"
+  name = "GitHub"
+  url = "https://github.com/idangoldman"
+  [social.params]
+    icon = "brand-github"
+
+[[social]]
+  identifier = "linkedin"
+  name = "LinkedIn"
+  url = "https://www.linkedin.com/in/idangoldman/"
+  [social.params]
+    icon = "brand-linkedin"
+
+[[social]]
+  identifier = "resume"
+  name = "Resume"
+  url = "/collaborate/Idan-Goldman-Polyglot-Technology-Leader-Resume.pdf"
+  [social.params]
+    icon = "file-cv"
+    newTab = true
+
+[[social]]
+  identifier = "rss"
+  name = "RSS"
+  url = "/index.xml"
+  [social.params]
+    icon = "rss"

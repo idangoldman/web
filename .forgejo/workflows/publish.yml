@@ -1,0 +1,22 @@
+name: Publish
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - "*"
+
+jobs:
+  publish:
+    runs-on: ubuntu
+    steps:
+      - run: echo "Publishing site..."
+      # - name: Download artifact
+      #   uses: forgejo/download-artifact@v4
+      #   with:
+      #     name: site
+      #     path: ./public
+      #     run-id: ${{ forge.event.workflow_run.id }}
+      # https://github.com/marketplace/actions/deploy-to-cloudflare-workers-with-wrangler
+      # - name: Deploy to Cloudflare Pages
+      #   uses: cloudflare/wrangler-action@v3

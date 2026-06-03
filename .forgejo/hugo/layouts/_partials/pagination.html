@@ -1,0 +1,44 @@
+{{- $paginator := .Paginator -}} {{- if gt $paginator.TotalPages 1 -}}
+<nav
+  class="pagination load-more"
+  aria-label="Pagination">
+  {{- with $paginator.Next }}
+  <a
+    class="page-link"
+    data-next-url="{{ .URL }}"
+    href="{{ .URL }}"
+    rel="next">
+    <span>Load more</span>
+  </a>
+  {{- end }}
+
+  <noscript>
+    <ul class="page-numbers">
+      {{- range $paginator.Pagers }}
+      <li>
+        <a
+          href="{{ .URL }}"
+          {{
+          if
+          eq
+          .
+          $paginator
+          }}
+          aria-current="page"
+          {{
+          end
+          }}>
+          {{ .PageNumber }}
+        </a>
+      </li>
+      {{- end }}
+    </ul>
+  </noscript>
+
+  {{- $js := resources.Get "js/load-more.js" | js.Build (dict "minify" true) | fingerprint -}}
+  <script
+    src="{{ $js.RelPermalink }}"
+    integrity="{{ $js.Data.Integrity }}"
+    defer></script>
+</nav>
+{{- end -}}

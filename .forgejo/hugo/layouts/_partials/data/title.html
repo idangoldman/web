@@ -1,0 +1,33 @@
+{{- $title := .Title -}}
+{{- $siteTitle := .Site.Title -}}
+{{- $sep := .Site.Params.titleSeparator | default "—" -}}
+
+{{- if .IsHome -}}
+    {{ $pages := where .Site.RegularPages "Section" "in" .Site.Params.mainSections }}
+    {{ $notHidden := where .Site.RegularPages "Params.hidden" "!=" true }}
+    {{ $filtered := ($pages | intersect $notHidden) }}
+    {{ $pag := .Paginate $filtered }}
+
+    {{- if .Paginator.HasPrev -}}
+        {{ $title = printf "%s %s Page %d" $siteTitle $sep .Paginator.PageNumber }}
+    {{- else if .Site.Params.sidebar.subtitle -}}
+        {{ $title = printf "%s %s %s" $siteTitle $sep .Site.Params.sidebar.subtitle }}
+    {{- else -}}
+        {{ $title = $siteTitle }}
+    {{- end -}}
+
+{{- else if eq .Kind "term" -}}
+    {{ $notHidden := where .Pages "Params.hidden" "!=" true }}
+    {{ $pag := .Paginate $notHidden }}
+
+    {{ $title = printf "%s: %s" (title .Data.Singular) $title }}
+    {{- if .Paginator.HasPrev -}}
+        {{ $title = printf "%s %s Page %d" $title $sep .Paginator.PageNumber }}
+    {{- end -}}
+    {{ $title = printf "%s %s %s" $title $sep $siteTitle }}
+
+{{- else -}}
+    {{ $title = printf "%s %s %s" $title $sep $siteTitle }}
+{{- end -}}
+
+{{ return $title }}

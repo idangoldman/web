@@ -1,0 +1,104 @@
+name: Release
+
+on:
+  workflow_dispatch:
+
+  push:
+    branches:
+      - main
+
+env:
+  HUGO_VERSION: "0.161.1"
+  SITE_ENV: production
+
+jobs:
+  build:
+    runs-on: ubuntu-go
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.FJ_ACTION_RUNNER_TOKEN }}
+
+      - name: Resolve paths
+        run: |
+          echo "BUILD_DIR=$PWD/.build"             >> "$FORGEJO_ENV"
+          echo "CONTENT_DIR=$PWD/.build/content"   >> "$FORGEJO_ENV"
+          echo "HUGO_DIR=$PWD/.forgejo/hugo"       >> "$FORGEJO_ENV"
+          echo "ROOT_DIR=$PWD"                     >> "$FORGEJO_ENV"
+          echo "SCRIPTS_DIR=$PWD/.forgejo/scripts" >> "$FORGEJO_ENV"
+
+      - name: Cache theme
+        id: cache-theme
+        uses: actions/cache@v4
+        with:
+          key: build-${{ env.HUGO_VERSION }}-${{ hashFiles('.forgejo/scripts/clone-theme.sh') }}
+          path: .theme-cache
+
+      - name: Cache APT packages list
+        id: cache-apt
+        uses: actions/cache@v4
+        with:
+          path: /var/lib/apt/lists
+          key: ${{ runner.os }}-apt-lists
+
+      - name: Update APT packages list
+        if: steps.cache-apt.outputs.cache-hit != 'true'
+        run: apt-get update
+
+      - name: Install dependencies
+        run: |
+          apt-get install -y rsync
+
+          curl -fsSL -o hugo.deb \
+            "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb"
+          sudo dpkg -i hugo.deb
+          hugo version
+
+      - name: Clone theme
+        if: steps.cache-theme.outputs.cache-hit != 'true'
+        run: BUILD_DIR="$PWD/.theme-cache" bash "${SCRIPTS_DIR}/clone-theme.sh"
+
+      - name: Copy cached theme
+        run: cp -r .theme-cache "${BUILD_DIR}"
+
+      - name: Copy theme customizations
+        run: cp -r "${HUGO_DIR}/." "${BUILD_DIR}/"
+
+      - name: Build content
+        run: bash "${SCRIPTS_DIR}/build-content.sh"
+
+      - name: Build site
+        run: |
+          hugo \
+            --cleanDestinationDir \
+            --destination "${BUILD_DIR}/public" \
+            --gc \
+            --minify \
+            --source "${BUILD_DIR}"
+
+      - name: Set Version
+        run: |
+          VERSION=$(date +%Y%m%d-%H%M%S)
+          echo "SITE_VERSION=$VERSION" >> "$FORGEJO_ENV"
+          echo "$VERSION"
+
+      - name: Package
+        run: zip -r "${SITE_VERSION}-site.zip" "${BUILD_DIR}/public"
+
+      - name: Upload
+        run: |
+          FILE_NAME="${SITE_VERSION}-site.zip"
+          REPO_NAME="${FORGEJO_REPOSITORY#*/}"
+
+          curl --fail \
+            -H "Authorization: token ${{ secrets.FJ_ACTION_RUNNER_TOKEN }}" \
+            --upload-file "$FILE_NAME" \
+            "${FORGEJO_SERVER_URL}/api/packages/${FORGEJO_REPOSITORY_OWNER}/generic/${REPO_NAME}/${SITE_VERSION}/${FILE_NAME}"
+
+      - name: Push Tag
+        run: |
+          git config user.name "forgejo-actions-bot"
+          git config user.email "actions@noreply.forgejo"
+          git tag --force "${SITE_VERSION}"
+          git push origin "${SITE_VERSION}" --force

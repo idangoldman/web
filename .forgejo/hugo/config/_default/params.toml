@@ -1,0 +1,47 @@
+favicon        = "img/avatar.png"
+mainSections   = ["notebook"]
+rssFullContent = true
+SortBy         = "default"
+
+[footer]
+    builtWith  = ""
+    customText = 'Writings are mine, and [code credits](https://github.com/idangoldman/web#credit-where-due) are shared with the community.'
+    designBy   = ""
+    since      = 2006
+
+[dateFormat]
+    published   = "2006-01-02"
+    lastUpdated = "2006-01-02"
+
+[sidebar]
+    emoji    = "😇"
+    subtitle = "ADHDer, Father, Partner, and a Keyboard Typer."
+    avatar   = "img/profile.png"
+
+[article]
+    headingAnchor = false
+    math          = false
+    readingTime   = true
+
+    [article.license]
+        enabled = false
+        default = "Licensed under CC BY-NC-SA 4.0"
+
+[widgets]
+    homepage = [
+        # { type = "archives", params = { limit = 5 } },
+        { type = "categories", params = { limit = 10 } },
+        { type = "tag-cloud", params = { limit = 10 } },
+    ]
+    page = [{ type = "toc" }]
+
+[opengraph.twitter]
+    site = "Idan Goldman"
+    card = "summary_large_image"
+
+[colorScheme]
+    toggle  = false
+    default = "light"
+
+[comments]
+    enabled  = false

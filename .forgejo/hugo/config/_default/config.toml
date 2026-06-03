@@ -1,0 +1,29 @@
+baseurl                = "https://idan.goldman.work/"
+defaultContentLanguage = "en"
+hasCJKLanguage         = false
+locale                 = "en-us"
+title                  = "Idan Goldman"
+titleSeparator = "—"
+
+[[cascade]]
+  layout = "single"
+[cascade.target]
+  path = "/collaborate"
+
+[[cascade]]
+  layout = "archives"
+[cascade.target]
+  path = "/notebook"
+
+[[cascade]]
+  layout = "archives"
+  [cascade.target]
+    kind = "term"
+
+[[cascade]]
+  layout = "archives"
+  [cascade.target]
+    kind = "taxonomy"
+
+[pagination]
+    pagerSize = 10

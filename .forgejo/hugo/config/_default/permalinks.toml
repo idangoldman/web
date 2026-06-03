@@ -1,0 +1,9 @@
+notebook = "/:slug/"
+
+[term]
+categories = '/notebook/categories/:slug/'
+tags = '/notebook/tags/:slug/'
+
+[taxonomy]
+categories = '/notebook/categories/'
+tags = '/notebook/tags/'
