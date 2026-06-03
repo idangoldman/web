@@ -1,22 +1,45 @@
 name: Publish
 
 on:
-  workflow_dispatch:
   push:
     tags:
       - "*"
+
+env:
+  REGISTRY_OWNER: ${{ github.repository_owner }}
+  PACKAGE_NAME: web
 
 jobs:
   publish:
     runs-on: ubuntu
     steps:
-      - run: echo "Publishing site..."
-      # - name: Download artifact
-      #   uses: forgejo/download-artifact@v4
-      #   with:
-      #     name: site
-      #     path: ./public
-      #     run-id: ${{ forge.event.workflow_run.id }}
-      # https://github.com/marketplace/actions/deploy-to-cloudflare-workers-with-wrangler
-      # - name: Deploy to Cloudflare Pages
-      #   uses: cloudflare/wrangler-action@v3
+      - name: Resolve version and file name
+        run: |
+          echo "FILE_NAME=$SITE_VERSION-site.zip" >> "$FORGEJO_ENV"
+          echo "SITE_VERSION=$FORGEJO_REF_NAME" >> "$FORGEJO_ENV"
+          echo "$SITE_VERSION $FILE_NAME"
+
+      - name: Download
+        run: |
+          REPO_NAME="${FORGEJO_REPOSITORY#*/}"
+
+          curl --fail --location \
+            -H "Authorization: token ${{ secrets.FJ_ACTION_RUNNER_TOKEN }}" \
+            -o "$FILE_NAME" \
+            "$FORGEJO_SERVER_URL/api/packages/${FORGEJO_REPOSITORY_OWNER}/generic/${REPO_NAME}/${SITE_VERSION}/${FILE_NAME}"
+
+      - name: Unpack
+        run: |
+          unzip -q "$FILE_NAME" -d unpacked
+          # workspace/idan/web/.build/public
+          PUBLIC_DIR="$(dirname "$(find unpacked -type f -name index.html | head -n1)")"
+          rm -rf public
+          mv "$PUBLIC_DIR" public
+          test -f public/index.html
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy public --project-name=web --branch=main
