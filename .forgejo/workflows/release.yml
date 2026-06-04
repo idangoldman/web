@@ -93,9 +93,11 @@ jobs:
           FILE_NAME="${SITE_VERSION}-site.zip"
           REPO_NAME="${FORGEJO_REPOSITORY#*/}"
 
+          cd "${BUILD_DIR}"
+
           curl --fail \
             -H "Authorization: token ${{ secrets.FJ_ACTION_RUNNER_TOKEN }}" \
-            --upload-file "$FILE_NAME" \
+            --upload-file "${FILE_NAME}" \
             "${FORGEJO_SERVER_URL}/api/packages/${FORGEJO_REPOSITORY_OWNER}/generic/${REPO_NAME}/${SITE_VERSION}/${FILE_NAME}"
 
       - name: Push Tag
