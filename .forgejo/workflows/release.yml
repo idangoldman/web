@@ -84,7 +84,9 @@ jobs:
           echo "$VERSION"
 
       - name: Package
-        run: zip -r "${SITE_VERSION}-site.zip" "${BUILD_DIR}/public"
+        run: |
+          cd "${BUILD_DIR}"
+          zip -r "${SITE_VERSION}-site.zip" "public"
 
       - name: Upload
         run: |
