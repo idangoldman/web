@@ -15,14 +15,14 @@ jobs:
     steps:
       - name: Resolve version and file name
         run: |
-          echo "FILE_NAME=$SITE_VERSION-site.zip" >> "$FORGEJO_ENV"
           echo "SITE_VERSION=$FORGEJO_REF_NAME" >> "$FORGEJO_ENV"
-          echo "$SITE_VERSION $FILE_NAME"
+          echo "FILE_NAME=$SITE_VERSION-site.zip" >> "$FORGEJO_ENV"
+          echo "REPO_NAME=${FORGEJO_REPOSITORY#*/}" >> "$FORGEJO_ENV"
+
+          echo "$FILE_NAME"
 
       - name: Download
         run: |
-          REPO_NAME="${FORGEJO_REPOSITORY#*/}"
-
           curl --fail --location \
             -H "Authorization: token ${{ secrets.FJ_ACTION_RUNNER_TOKEN }}" \
             -o "$FILE_NAME" \
@@ -30,16 +30,12 @@ jobs:
 
       - name: Unpack
         run: |
-          unzip -q "$FILE_NAME" -d unpacked
-          # workspace/idan/web/.build/public
-          PUBLIC_DIR="$(dirname "$(find unpacked -type f -name index.html | head -n1)")"
-          rm -rf public
-          mv "$PUBLIC_DIR" public
+          unzip -q "$FILE_NAME"
           test -f public/index.html
 
       - name: Deploy to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v3
+        uses: cloudflare/wrangler-action@v4
         with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy public --project-name=web --branch=main
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          command: pages deploy public --project-name=$REPO_NAME
