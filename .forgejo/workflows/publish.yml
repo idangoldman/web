@@ -15,9 +15,13 @@ jobs:
     steps:
       - name: Resolve version and file name
         run: |
-          echo "SITE_VERSION=$FORGEJO_REF_NAME" >> "$FORGEJO_ENV"
-          echo "FILE_NAME=$FORGEJO_REF_NAME-site.zip" >> "$FORGEJO_ENV"
-          echo "REPO_NAME=${FORGEJO_REPOSITORY#*/}" >> "$FORGEJO_ENV"
+          FILE_NAME="$FORGEJO_REF_NAME-site.zip"
+          REPO_NAME="${FORGEJO_REPOSITORY#*/}"
+          SITE_VERSION=$FORGEJO_REF_NAME
+
+          echo "FILE_NAME=$FILE_NAME" >> "$FORGEJO_ENV"
+          echo "REPO_NAME=$REPO_NAME" >> "$FORGEJO_ENV"
+          echo "SITE_VERSION=$SITE_VERSION" >> "$FORGEJO_ENV"
 
           echo "$FILE_NAME"
 
@@ -38,4 +42,4 @@ jobs:
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          command: pages deploy public --project-name=$REPO_NAME
+          command: pages deploy public --project-name=${{ env.REPO_NAME }}
