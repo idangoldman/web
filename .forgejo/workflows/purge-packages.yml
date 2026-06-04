@@ -1,0 +1,50 @@
+name: Purge Packages
+
+on:
+  workflow_dispatch:
+
+  # schedule:
+  #   - cron: "0 0 * * 0"
+
+env:
+  KEEP_COUNT: 3
+
+jobs:
+  purge-packages:
+    runs-on: ubuntu
+    steps:
+      - name: Resolve versions to delete
+        run: |
+          set -euo pipefail
+
+          PACKAGE_NAME="${FORGEJO_REPOSITORY#*/}"
+          echo "PACKAGE_NAME=$PACKAGE_NAME" >> "$FORGEJO_ENV"
+
+          RESPONSE=$(curl -sf -H "Authorization: token ${{ secrets.FJ_ACTION_RUNNER_TOKEN }}" \
+            "${FORGEJO_API_URL}/packages/${FORGEJO_REPOSITORY_OWNER}?type=generic&q=${PACKAGE_NAME}&limit=50")
+
+          [ "$(echo "$RESPONSE" | jq 'type')" = '"array"' ] || { echo "Unexpected response"; exit 1; }
+
+          DELETION_LIST=$(echo "$RESPONSE" | jq -r \
+            --argjson keep "$KEEP_COUNT" --arg name "$PACKAGE_NAME" '
+              [ .[] | select(.name == $name) ]
+              | sort_by(.created_at) | reverse
+              | .[$keep:][] .version
+            ' | tr '\n' ' ')
+
+          echo "DELETION_LIST=$DELETION_LIST" >> "$FORGEJO_ENV"
+
+      - name: Delete old versions
+        run: |
+          set -uo pipefail
+
+          for VERSION in $DELETION_LIST; do
+            STATUS=$(curl -so /dev/null -w "%{http_code}" -X DELETE \
+              -H "Authorization: token ${{ secrets.FJ_ACTION_RUNNER_TOKEN }}" \
+              "${FORGEJO_API_URL}/packages/${FORGEJO_REPOSITORY_OWNER}/generic/${PACKAGE_NAME}/${VERSION}")
+
+            case "$STATUS" in
+              200|204) echo "Deleted $VERSION" ;;
+              *)       echo "Failed to delete $VERSION (HTTP $STATUS)"; exit 1 ;;
+            esac
+          done
