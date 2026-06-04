@@ -24,6 +24,7 @@ if [[ -f "$BUILD_CONTENT_DIR/home.md" ]]; then
 fi
 
 if [[ "$SITE_ENV" == "production" ]]; then
+  rm -rf "$BUILD_CONTENT_DIR/collaborate/testimonials"
   rm -rf "$BUILD_CONTENT_DIR/notebook/drafts"
 fi
 
