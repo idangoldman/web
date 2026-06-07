@@ -47,7 +47,7 @@
 [[social]]
   identifier = "resume"
   name = "Resume"
-  url = "/collaborate/idan-goldman-polyglot-technology-leader-resume.pdf"
+  url = "/collaborate/idan-goldman-resume.pdf"
   [social.params]
     icon = "file-cv"
     newTab = true
