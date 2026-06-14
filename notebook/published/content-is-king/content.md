@@ -11,6 +11,11 @@ tags:
   - ssg
 draft: false
 image: ./post-image-by-gemini.png
+links:
+  - title: LinkedIn Post
+    description: You can find this post on LinkedIn, where you can share and comment on it!
+    website: https://www.linkedin.com/posts/idangoldman_content-is-king-a-thesis-on-personal-website-activity-7471841675582271488-iOLK
+    image: /linkedin.svg
 ---
 
 For years, I had developer's block as a writer — trying to build/rebuild/optimize the website, putting my writings aside, chasing the perfect structure worthy enough to exhibit my thoughts, ideas, feelings, and work. All I wanted was a way to write and post the damn thing… yet all I did was code the damn thing, which got me blocked from writing the damn thing again and again. Now, I'm trying a new thing (for me): writing about how to build the damn thing while building the damn thing — dogfooding myself, if you will.
