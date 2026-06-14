@@ -10,8 +10,6 @@
 
     {{- if .Paginator.HasPrev -}}
         {{ $title = printf "%s %s Page %d" $siteTitle $sep .Paginator.PageNumber }}
-    {{- else if .Site.Params.sidebar.subtitle -}}
-        {{ $title = printf "%s %s %s" $siteTitle $sep .Site.Params.sidebar.subtitle }}
     {{- else -}}
         {{ $title = $siteTitle }}
     {{- end -}}
