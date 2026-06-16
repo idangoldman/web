@@ -1,5 +1,5 @@
 ---
-title: 'Im back on the market'
+title: 'Back On The Market'
 date: '2026-06-02T12:10:00+03:00'
 description: |
   Well, that was short and sweet! You know how it goes, sometimes a role and a person just aren't the match they looked like at first, and a few months down the road you both see it clearly. No hard feelings!
@@ -17,6 +17,7 @@ tags:
   - test coverage
   - platform
 draft: false
+image: ./post-image-by-gemini.png
 links:
   - title: LinkedIn Post
     description: You can find this post on LinkedIn, where you can share and comment on it!

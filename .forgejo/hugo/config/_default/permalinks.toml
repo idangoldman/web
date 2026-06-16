@@ -1,4 +1,4 @@
-notebook = "/:slug/"
+notebook = "/notebook/:slug/"
 
 [term]
 categories = '/notebook/categories/:slug/'
