@@ -15,6 +15,10 @@ tags:
 draft: false
 image: ./post-image-by-gemini.png
 links:
+  - title: LinkedIn Post
+    description: You can find this post on LinkedIn, where you can share and comment on it!
+    website: https://www.linkedin.com/posts/idangoldman_buildinginpublic-indiehacker-saas-activity-7474757995403419648-UIPu
+    image: /linkedin.svg
   - title: saasbuild
     description: "Failed Reddit discussion thread asking for feedback"
     website: https://www.reddit.com/r/saasbuild/s/3lXz2jNWJ5
