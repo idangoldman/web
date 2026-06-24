@@ -34,22 +34,23 @@ This time, content files are the main focus — as they always should have been 
 
 ## How it looks
 
-```shell
+```tree
 web/
-├─ .forgejo/
-├─ about.md
-├─ home.md
-└─ notebook/
-  ├─ april-fools-beginning.md
-  ├─ i-want-to-tell-you-a-story.md
-  ├─ month-of-flying-by.md
-  ├─ public-beta-is-out/
-  │  ├─ content.md
-  │  ├─ staticpage-logo.png
-  │  └─ staticpage-landing-page.png
-  ├─ ready-to-go-full-time.md
-  ├─ ...
-  └─ studio.md
+├── .forgejo/
+├── about.md
+├── home.md
+├── notebook/
+│   ├── april-fools-beginning.md
+│   ├── i-want-to-tell-you-a-story.md
+│   ├── month-of-flying-by.md
+│   ├── public-beta-is-out/
+│   │   ├── content.md
+│   │   ├── staticpage-logo.png
+│   │   └── staticpage-landing-page.png
+│   ├── ready-to-go-full-time.md
+│   └── ...
+├── ...
+└── studio.md
 ```
 
 Well, what do you think? To my eyes the codebase clutter is gone, and all I'm left with is structured content — files and folders translated into web paths, with some code plumbing underneath, like:
@@ -63,16 +64,15 @@ Well, what do you think? To my eyes the codebase clutter is gone, and all I'm le
 
 The hidden piece of code plumbing (the magic) is done inside the `.forgejo` folder. Take a look:
 
-```shell
-web/
-└─ .forgejo/
-  ├─ workflows/
-  │  ├─ build.yml
-  │  └─ deploy.yml
-  └─ quartz/
-     ├─ custom.scss
-     ├─ quartz.config.ts
-     └─ quartz.layout.ts
+```tree
+.forgejo/
+├── quartz/
+│   ├── custom.scss
+│   ├── quartz.config.ts
+│   └── quartz.layout.ts
+└── workflows/
+    ├── build.yml
+    └── deploy.yml
 ```
 
 So, what do we have here? `workflows` and `quartz` folders — one for building and deploying the website's content you read here, and the other for the website's configuration and customization you see here.

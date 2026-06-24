@@ -8,4 +8,4 @@ if [[ "${1:-}" == "--fresh" ]]; then
   export FRESH=1
 fi
 
-exec process-compose up --config "$ROOT_DIR/.forgejo/process-compose.yml"
+exec process-compose up --config "$ROOT_DIR/.forgejo/local/process-compose.yml"
