@@ -92,7 +92,7 @@ flowchart TD
 
     subgraph pipeline ["Automatic Pipeline"]
         direction TB
-        C{"Were any\ncontent files\nchanged?"}:::decision
+        C{"Were any content files changed?"}:::decision
         C -->|No| D["Nothing to do"]:::skip
         C -->|Yes| E["What changed?"]:::action
 
@@ -101,19 +101,19 @@ flowchart TD
         E --> H["Removed file"]:::change
         E --> I["Moved / renamed file"]:::change
 
-        F --> J{"Marked as\npublished?"}:::decision
-        G --> K{"Marked as\npublished?"}:::decision
-        I --> L{"Marked as\npublished?"}:::decision
+        F --> J{"Marked as published?"}:::decision
+        G --> K{"Marked as published?"}:::decision
+        I --> L{"Marked as published?"}:::decision
 
         J -->|Yes| M["Add to website"]:::publish
         J -->|No| N["Skip, it's a draft"]:::skip
         K -->|Yes| O["Update on website"]:::publish
         K -->|No| P["Remove from website"]:::remove
         H --> Q["Remove from website"]:::remove
-        L -->|Yes| R["Remove old location\nAdd new location"]:::publish
+        L -->|Yes| R["Remove old location Add new location"]:::publish
         L -->|No| S["Remove old location"]:::remove
 
-        M --> T["Get current\nwebsite version"]:::action
+        M --> T["Get current website version"]:::action
         N --> T
         O --> T
         P --> T
@@ -121,13 +121,13 @@ flowchart TD
         R --> T
         S --> T
 
-        T --> U["Rebuild website\nwith all changes applied"]:::build
-        U --> V["Save new\nwebsite version"]:::action
+        T --> U["Rebuild website with all changes applied"]:::build
+        U --> V["Save new website version"]:::action
     end
 
     B --> C
     V --> W["Publish website"]:::deploy
-    W --> X["Live at\nidan.goldman.work"]:::live
+    W --> X["Live at idan.goldman.work"]:::live
 
     classDef write fill:#4a9eff,stroke:#2d7cd6,color:#fff
     classDef action fill:#6c757d,stroke:#545b62,color:#fff
