@@ -14,7 +14,7 @@ on:
 
 env:
   HUGO_VERSION: "0.161.1"
-  THEME_VERSION: "v4.0.3"
+  THEME_VERSION: "4.0.3"
   SITE_ENV: production
 
 jobs:
