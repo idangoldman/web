@@ -16,6 +16,11 @@ tags:
 
 draft: false
 image: ./post-image-by-gemini.png
+links:
+  - title: LinkedIn Post
+    description: You can find this post on LinkedIn, where you can share and comment on it!
+    website: https://www.linkedin.com/posts/idangoldman_selfhosting-hugo-devops-activity-7476937017965232128-ex_X/
+    image: /linkedin.svg
 ---
 
 > King Content lived a life of theory, hypothesis, and analysis, and died to live a life of thesis. Long live King Content II.
