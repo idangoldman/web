@@ -147,4 +147,4 @@ Yeah, I know it's a bit much for a personal website, and might change later.
 
 …and that's it, folks — thank you for reading! See you next time.
 
-**P.S.** If you are reading this, the website is already up and this content piece is already outdated on how the actual website got built. Still the same idea — just different tools and workflows.
+**P.S.** If you are reading this, the website is up and this content piece is already outdated on how the actual website got built. Read [King Content is Dead, Long Live King Content](/notebook/king-content-is-dead-long-live-king-content/) to view how the website is actually released and published.
