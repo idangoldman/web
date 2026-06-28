@@ -6,9 +6,15 @@ on:
   push:
     branches:
       - main
+    paths:
+      - "**/*.md"
+      - "!README.md"
+      - "!.forgejo/**/*"
+      - "!notebook/drafts/**/*"
 
 env:
   HUGO_VERSION: "0.161.1"
+  THEME_VERSION: "v4.0.3"
   SITE_ENV: production
 
 jobs:
@@ -32,7 +38,7 @@ jobs:
         id: cache-theme
         uses: actions/cache@v4
         with:
-          key: build-${{ env.HUGO_VERSION }}-${{ hashFiles('.forgejo/scripts/clone-theme.sh') }}
+          key: build-${{ env.HUGO_VERSION }}--${{ env.THEME_VERSION }}-${{ hashFiles('.forgejo/scripts/clone-theme.sh') }}
           path: .theme-cache
 
       - name: Install dependencies
@@ -46,7 +52,10 @@ jobs:
 
       - name: Clone theme
         if: steps.cache-theme.outputs.cache-hit != 'true'
-        run: BUILD_DIR="$PWD/.theme-cache" bash "${SCRIPTS_DIR}/clone-theme.sh"
+        run: |
+          export THEME_VERSION=${{ env.THEME_VERSION }}
+          BUILD_DIR="$PWD/.theme-cache"
+          bash "${SCRIPTS_DIR}/clone-theme.sh"
 
       - name: Copy cached theme
         run: cp -r .theme-cache "${BUILD_DIR}"
