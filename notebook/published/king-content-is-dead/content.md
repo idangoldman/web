@@ -1,6 +1,6 @@
 ---
 title: 'King Content is Dead, Long Live King Content'
-date: '2026-06-25T00:00:00+03:00'
+date: '2026-06-28T12:58:00+03:00'
 description: 'Moving from theory to thesis: how I adapted my personal website architecture by swapping out the SSG, isolating plumbing code, and refactoring CI/CD workflows.'
 categories:
   - field notes
