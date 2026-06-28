@@ -1,9 +1,10 @@
 baseurl                = "https://idan.goldman.work/"
 defaultContentLanguage = "en"
+enableRobotsTXT        = true
 hasCJKLanguage         = false
 locale                 = "en-us"
 title                  = "Idan Goldman"
-titleSeparator = "—"
+titleSeparator         = "—"
 
 [[cascade]]
   layout = "single"
