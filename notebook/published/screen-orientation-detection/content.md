@@ -11,6 +11,11 @@ tags:
   - responsive
 draft: false
 image: ./post-image-by-gemini.png
+links:
+  - title: LinkedIn Post
+    description: You can find this post on LinkedIn, where you can share and comment on it!
+    website: https://www.linkedin.com/posts/idangoldman_webdev-javascript-frontend-activity-7477681378613194753-CQsm
+    image: /linkedin.svg
 ---
 
 ## Reading the orientation
